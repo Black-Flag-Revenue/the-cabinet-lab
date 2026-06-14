@@ -3,352 +3,395 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cabinet Door Lab | Drop-Off Cabinet Door Refinishing | Hickory NC</title>
-  <meta name="description" content="Cabinet Door Lab — professional drop-off cabinet door refinishing serving Hickory, Statesville, Mooresville, Charlotte & the Lake Norman area. Catalyzed 2K coating. Starting at $80/door." />
+  <title>Cabinet Door Lab | Professional Cabinet Door Refinishing | Hickory NC</title>
+  <meta name="description" content="Cabinet Door Lab — drop-off cabinet door refinishing with catalyzed 2K coating and turbine HVLP. Starting at $80/door. Hickory, Statesville, Mooresville, Charlotte NC." />
   <link rel="canonical" href="https://cabinetdoorlab.com/" />
   <meta property="og:title" content="Cabinet Door Lab | Cabinet Door Refinishing NC" />
-  <meta property="og:description" content="You remove them. We spray them. You reinstall them. Professional 2K catalyzed finish. Drop-off service. Hickory, NC area." />
+  <meta property="og:description" content="Your kitchen deserves better than a paint job. Drop-off cabinet door refinishing with a catalyzed 2K coating. Hickory, NC area." />
   <meta property="og:image" content="https://cabinetdoorlab.com/images/hero-banner.png" />
   <meta property="og:url" content="https://cabinetdoorlab.com/" />
   <meta property="og:type" content="website" />
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org","@type":"LocalBusiness",
-    "name":"Cabinet Door Lab",
-    "description":"Professional drop-off cabinet door refinishing using catalyzed 2K coatings. Serving the Hickory, Statesville, Mooresville, Denver, Wilkesboro, Cornelius, and Charlotte NC area.",
-    "url":"https://cabinetdoorlab.com",
-    "telephone":"+19803910498",
-    "email":"orders@cabinetdoorlab.com",
-    "address":{"@type":"PostalAddress","addressLocality":"Hickory","addressRegion":"NC","addressCountry":"US"},
-    "areaServed":["Hickory NC","Statesville NC","Mooresville NC","Denver NC","Wilkesboro NC","Cornelius NC","Charlotte NC"],
-    "priceRange":"$$",
-    "openingHours":"Mo-Sa 08:00-18:00"
-  }
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Cabinet Door Lab","description":"Professional drop-off cabinet door refinishing using catalyzed 2K coatings. Serving Hickory, Statesville, Mooresville, Denver, Wilkesboro, Cornelius, and Charlotte NC.","url":"https://cabinetdoorlab.com","telephone":"+19803910498","email":"orders@cabinetdoorlab.com","address":{"@type":"PostalAddress","addressLocality":"Hickory","addressRegion":"NC","addressCountry":"US"},"areaServed":["Hickory NC","Statesville NC","Mooresville NC","Denver NC","Wilkesboro NC","Cornelius NC","Charlotte NC"],"priceRange":"$$"}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    /* Homepage-specific */
-    .hero { min-height: 100vh; display:flex; align-items:center; padding-top:82px; }
-    .hero-bg { background-image: url('images/hero-banner.png'); }
-    .hero-content { padding: 0 48px; max-width:800px; }
-    .hero h1 { margin-bottom:24px; }
-    .hero h1 em { color:var(--red); font-style:normal; }
-    .hero-sub { font-size:19px; color:rgba(245,245,245,0.75); max-width:580px; margin-bottom:40px; line-height:1.75; }
-    .hero-steps {
-      display:flex; gap:0; margin-bottom:48px;
-      border:1px solid var(--border); border-radius:6px; overflow:hidden;
-      max-width:560px;
-    }
-    .hero-step {
-      flex:1; padding:18px 20px; text-align:center;
-      border-right:1px solid var(--border);
-      background:rgba(255,255,255,0.03);
-    }
-    .hero-step:last-child { border-right:none; }
-    .hero-step .step-icon { font-size:22px; display:block; margin-bottom:6px; }
-    .hero-step p { font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted2); margin:0; }
-    .hero-step strong { display:block; font-size:13px; color:var(--white); margin-bottom:4px; }
-    .hero-btns { display:flex; gap:16px; flex-wrap:wrap; }
-
-    .hero-scroll-indicator {
-      position:absolute; bottom:40px; left:50%; transform:translateX(-50%);
-      display:flex; flex-direction:column; align-items:center; gap:8px;
-      opacity:0; animation:fadeIn 0.5s 1.5s forwards;
-    }
-    .hero-scroll-indicator span { font-size:10px; letter-spacing:0.18em; color:var(--muted); text-transform:uppercase; }
-    .scroll-bar { width:1px; height:52px; background:linear-gradient(to bottom, var(--red), transparent); animation:scrollLine 1.6s ease-in-out infinite; }
-
-    /* Trust bar */
-    .trust-bar { background:var(--surface); border-bottom:1px solid var(--border); padding:24px 0; }
-    .trust-bar-inner { display:flex; align-items:center; justify-content:center; gap:48px; flex-wrap:wrap; }
-    .trust-item { display:flex; align-items:center; gap:10px; }
-    .trust-item .ti-icon { font-size:20px; }
-    .trust-item p { font-size:13px; font-weight:600; color:var(--muted2); margin:0; letter-spacing:0.05em; }
-
-    /* How it works */
-    .hiw-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:3px; margin-top:60px; }
-    .hiw-card {
-      background:var(--surface); padding:52px 40px;
-      position:relative; overflow:hidden;
-      transition:background 0.3s;
-    }
-    .hiw-card:hover { background:var(--surface2); }
-    .hiw-card::after {
-      content:''; position:absolute; top:0; left:0; right:0; height:3px;
-      background:var(--red); transform:scaleX(0); transform-origin:left;
-      transition:transform 0.4s;
-    }
-    .hiw-card:hover::after { transform:scaleX(1); }
-    .hiw-bg-num {
-      position:absolute; bottom:-10px; right:16px;
-      font-family:'Bebas Neue',sans-serif; font-size:130px; line-height:1;
-      color:rgba(232,57,47,0.06); pointer-events:none; transition:color 0.3s;
-    }
-    .hiw-card:hover .hiw-bg-num { color:rgba(232,57,47,0.1); }
-    .hiw-icon { font-size:40px; margin-bottom:20px; display:block; }
-    .hiw-card h3 { margin-bottom:14px; }
-    .hiw-card p { font-size:15px; line-height:1.75; }
-
-    /* Services preview */
-    .services-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-top:60px; }
-    .service-card {
-      background:var(--surface); border:1px solid var(--border); border-radius:6px;
-      padding:36px 32px; display:flex; align-items:flex-start; gap:20px;
-      transition:border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-      text-decoration:none; color:inherit;
-    }
-    .service-card:hover {
-      border-color:var(--red); transform:translateY(-4px);
-      box-shadow:0 12px 40px rgba(0,0,0,0.4);
-    }
-    .service-card .sc-icon { font-size:36px; flex-shrink:0; }
-    .service-card h3 { margin-bottom:8px; font-size:22px; }
-    .service-card p { font-size:14px; margin:0; }
-    .service-card .sc-price {
-      font-family:'Bebas Neue',sans-serif; font-size:22px;
-      color:var(--red); margin-top:12px; display:block;
-    }
-
-    /* Stats */
-    .stats-section { background:var(--red); padding:70px 0; }
-    .stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:40px; text-align:center; }
-    .stat-item .num {
-      font-family:'Bebas Neue',sans-serif;
-      font-size:clamp(48px,6vw,80px); color:var(--white); line-height:1;
-    }
-    .stat-item .lbl { font-size:13px; color:rgba(255,255,255,0.7); letter-spacing:0.1em; text-transform:uppercase; margin-top:6px; }
-
-    /* CTA band */
-    .cta-band { padding:100px 0; text-align:center; }
-    .cta-band h2 { margin-bottom:20px; }
-    .cta-band p { font-size:18px; margin-bottom:40px; max-width:500px; margin-left:auto; margin-right:auto; }
-    .cta-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
-
-    @media(max-width:768px){
-      .hero-content { padding:0 24px; }
-      .hero h1 { font-size:clamp(44px,12vw,72px); }
-      .hero-steps { flex-direction:column; }
-      .hero-step { border-right:none; border-bottom:1px solid var(--border); }
-      .hero-step:last-child { border-bottom:none; }
-      .hiw-grid { grid-template-columns:1fr; gap:3px; }
-      .services-grid { grid-template-columns:1fr; }
-      .stats-grid { grid-template-columns:repeat(2,1fr); }
-      .trust-bar-inner { gap:24px; }
-    }
+    .why-grid { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--rule); }
+    .why-cell { padding:48px 36px; border-right:1px solid var(--rule); transition:background 0.3s; }
+    .why-cell:last-child { border-right:none; }
+    .why-cell:hover { background:var(--surface); }
+    .why-cell-num { font-family:'Bebas Neue',sans-serif; font-size:11px; letter-spacing:0.2em; color:var(--red); margin-bottom:32px; display:flex; align-items:center; gap:10px; }
+    .why-cell-num::after { content:''; flex:1; height:1px; background:var(--rule2); }
+    .why-cell h4 { font-family:'Bebas Neue',sans-serif; font-size:20px; letter-spacing:0.04em; margin-bottom:12px; }
+    .why-cell p { font-size:13px; line-height:1.85; }
+    .coating-intro { display:grid; grid-template-columns:1fr 1fr; gap:100px; align-items:center; }
+    .coating-specs { border-top:1px solid var(--rule); }
+    .coating-spec-row { display:grid; grid-template-columns:1fr 1fr; gap:0; border-bottom:1px solid var(--rule); }
+    .coating-spec-cell { padding:20px 24px; }
+    .coating-spec-cell:first-child { border-right:1px solid var(--rule); }
+    .coating-spec-label { font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--white3); margin-bottom:6px; }
+    .coating-spec-val { font-size:14px; color:var(--white2); }
+    .coating-spec-val strong { color:var(--white); }
+    .contact-split { display:grid; grid-template-columns:1fr 1fr; border-top:1px solid var(--rule); }
+    .contact-half { padding:64px 60px; border-right:1px solid var(--rule); text-decoration:none; color:inherit; transition:background 0.3s; display:block; }
+    .contact-half:last-child { border-right:none; }
+    .contact-half:hover { background:var(--surface2); }
+    .contact-half-label { font-size:10px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--red); margin-bottom:16px; }
+    .contact-half-value { font-family:'Bebas Neue',sans-serif; font-size:clamp(28px,3.5vw,44px); letter-spacing:0.03em; color:var(--white); margin-bottom:16px; line-height:1.1; }
+    .contact-half-note { font-size:13px; color:var(--white3); line-height:1.75; }
+    @media(max-width:1024px){ .why-grid { grid-template-columns:repeat(2,1fr); } .why-cell { border-bottom:1px solid var(--rule); } }
+    @media(max-width:768px){ .why-grid { grid-template-columns:1fr; } .why-cell { border-right:none; } .coating-intro { grid-template-columns:1fr; gap:48px; } .contact-split { grid-template-columns:1fr; } .contact-half { border-right:none; border-bottom:1px solid var(--rule); padding:48px 24px; } }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav id="nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Cabinet Door Lab" /></a>
-    <ul class="nav-menu">
-      <li><a href="pages/how-it-works.html">How It Works</a></li>
+    <ul class="nav-links">
+      <li><a href="pages/how-it-works.html">Process</a></li>
       <li><a href="pages/services.html">Services</a></li>
       <li><a href="pages/pricing.html">Pricing</a></li>
-      <li><a href="pages/coating-guide.html">Coating Guide</a></li>
+      <li><a href="pages/coating-guide.html">2K Coating</a></li>
       <li><a href="pages/gallery.html">Gallery</a></li>
       <li><a href="pages/about.html">About</a></li>
       <li><a href="pages/faq.html">FAQ</a></li>
-      <li><a href="pages/contact.html" class="nav-cta">Get A Quote</a></li>
     </ul>
-    <div class="nav-hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </div>
+    <a href="pages/contact.html" class="nav-cta-btn">Get A Quote</a>
+    <div class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></div>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- ═══ HERO ═══ -->
 <section class="hero">
   <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
+  <div class="hero-vignette"></div>
   <canvas id="spray-canvas"></canvas>
-  <div class="hero-content">
-    <p class="label animate-up">Hickory, NC &amp; Surrounding Areas</p>
-    <h1 class="animate-up delay-1">You Remove Them.<br /><em>We Spray Them.</em><br />You Reinstall Them.</h1>
-    <p class="hero-sub animate-up delay-2">Professional drop-off cabinet door refinishing with a catalyzed 2K coating. Factory-hard finish. No mess in your home.</p>
-    <div class="hero-steps animate-up delay-3">
-      <div class="hero-step">
-        <span class="step-icon">🚪</span>
-        <strong>Remove</strong>
-        <p>Doors &amp; hardware</p>
-      </div>
-      <div class="hero-step">
-        <span class="step-icon">🔫</span>
-        <strong>Drop Off</strong>
-        <p>We spray &amp; finish</p>
-      </div>
-      <div class="hero-step">
-        <span class="step-icon">✅</span>
-        <strong>Pick Up</strong>
-        <p>Looking brand new</p>
-      </div>
-    </div>
-    <div class="hero-btns animate-up delay-4">
-      <a href="pages/pricing.html" class="btn btn-red" style="animation:redPulse 2.5s 2s ease-in-out infinite;">See Pricing</a>
-      <a href="pages/how-it-works.html" class="btn btn-outline">How It Works</a>
-    </div>
-  </div>
-  <div class="hero-scroll-indicator">
-    <div class="scroll-bar"></div>
+  <div class="hero-scroll">
+    <div class="scroll-track"></div>
     <span>Scroll</span>
+  </div>
+  <div class="wrap" style="width:100%;">
+    <div class="hero-content">
+      <div>
+        <p class="hero-eyebrow animate-up">Hickory, NC &mdash; Drop-Off Refinishing Service</p>
+        <h1 class="animate-up d2">Your Kitchen<br />Deserves Better<br /><em>Than A Paint Job.</em></h1>
+        <p class="hero-sub animate-up d3">Most cabinet painters brush or roll. The finish looks painted because it is. We spray every door with a professional turbine HVLP system using a catalyzed 2K coating — the same process used in production cabinet factories. Drop off your doors. Pick up a kitchen that looks like it was never touched.</p>
+        <div class="hero-actions animate-up d4">
+          <a href="pages/pricing.html" class="btn-primary">View Pricing</a>
+          <a href="pages/how-it-works.html" class="btn-ghost">How It Works</a>
+        </div>
+      </div>
+      <div class="hero-sidebar animate-up d5">
+        <div class="hero-stat-block">
+          <div class="hero-stat-num">$80<span>/door</span></div>
+          <div class="hero-stat-label">Standard doors, starting price</div>
+        </div>
+        <div class="hero-stat-block">
+          <div class="hero-stat-num">~7<span> days</span></div>
+          <div class="hero-stat-label">Average turnaround time</div>
+        </div>
+        <div class="hero-stat-block">
+          <div class="hero-stat-num">$0<span> down</span></div>
+          <div class="hero-stat-label">Nothing due until pickup</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-bar-inner container">
-    <div class="trust-item"><span class="ti-icon">🔫</span><p>Turbine HVLP Spray System</p></div>
-    <div class="trust-item"><span class="ti-icon">💎</span><p>Catalyzed 2K Coating</p></div>
-    <div class="trust-item"><span class="ti-icon">📅</span><p>~1 Week Turnaround</p></div>
-    <div class="trust-item"><span class="ti-icon">💰</span><p>Pay At Pickup</p></div>
-    <div class="trust-item"><span class="ti-icon">📍</span><p>Hickory, NC Area</p></div>
+<!-- ═══ PROCESS ═══ -->
+<section style="background:var(--surface);">
+  <div class="wrap">
+    <div class="section-header" style="padding-top:80px;padding-bottom:60px;">
+      <p class="section-label reveal">The Process</p>
+      <div class="section-header-split" style="margin-bottom:0;">
+        <h2 class="reveal rd1">Simple Enough<br />To Explain In<br />Three Steps.</h2>
+        <div class="reveal rd2">
+          <p style="font-size:16px;margin-bottom:20px;">No contractor in your home. No overspray in your kitchen. No scheduling around your household for three days while someone brushes latex onto your cabinets and calls it refinished.</p>
+          <p style="font-size:16px;">You remove the doors. We spray them properly. You put them back. The entire interaction with your home is a drop-off and a pickup.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap" style="padding-top:0;padding-bottom:80px;">
+    <div class="process-strip">
+      <div class="process-step reveal rd1">
+        <div class="process-step-num">Step 01</div>
+        <h3>Remove &amp; Drop Off</h3>
+        <p>Pull every door and drawer face. Strip all hardware — every hinge, pull, knob, handle. Wipe them down. Load them in your vehicle and drop them at our shop with the 2K coating you purchased. That is the full extent of your job.</p>
+        <a href="pages/how-it-works.html" class="process-step-link">Full Prep Guide</a>
+      </div>
+      <div class="process-step reveal rd2">
+        <div class="process-step-num">Step 02</div>
+        <h3>We Handle The Rest</h3>
+        <p>Every piece goes through complete sanding, surface prep, and tack cleaning before a single drop of coating touches it. Then it gets sprayed through a professional turbine HVLP system — multiple coats, proper flash time, full cure before release.</p>
+        <a href="pages/coating-guide.html" class="process-step-link">About The Coating</a>
+      </div>
+      <div class="process-step reveal rd3">
+        <div class="process-step-num">Step 03</div>
+        <h3>Pick Up &amp; Pay</h3>
+        <p>We contact you when your doors are ready — typically about a week out. You come in, inspect every piece, and pay at pickup. Not before. Hang them back up, reattach your hardware, and you have a kitchen that looks like a renovation at a fraction of replacement cost.</p>
+        <a href="pages/pricing.html" class="process-step-link">View Pricing</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRICING TABLE ═══ -->
+<section class="section" style="background:var(--black);">
+  <div class="wrap">
+    <div class="section-header-split">
+      <div>
+        <p class="section-label reveal">What It Costs</p>
+        <h2 class="reveal rd1">Flat Rate.<br />Per Piece.<br />No Surprises.</h2>
+      </div>
+      <div class="reveal rd2">
+        <p style="font-size:16px;margin-bottom:16px;">Every price below is per piece, flat-rate. You buy the coating — we do not mark up materials. Nothing is due until you pick up and approve the work.</p>
+        <p style="font-size:14px;color:var(--white3);">A typical kitchen of 10 standard doors and 6 drawer faces runs approximately <strong style="color:var(--white);">$1,100 in labor</strong> — before you've spent $3,000 on an in-home painter who's rolling latex and calling it a finish.</p>
+      </div>
+    </div>
+    <table class="services-table reveal">
+      <thead>
+        <tr>
+          <th style="width:35%;">Surface</th>
+          <th>Notes</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Standard Door</td>
+          <td class="desc">Any style — shaker, flat-panel, raised-panel, slab. Hardware removed, surface wiped. Both sides finished.</td>
+          <td class="price"><span class="from">per door</span>$80</td>
+        </tr>
+        <tr>
+          <td>Drawer Face</td>
+          <td class="desc">All sizes. Sprayed to match your doors exactly — same coating, same process, seamless result.</td>
+          <td class="price"><span class="from">per face</span>$50</td>
+        </tr>
+        <tr>
+          <td>Pantry &amp; Oversized</td>
+          <td class="desc">Full-height pantry doors and oversized cabinet doors beyond standard dimensions.</td>
+          <td class="price"><span class="from">per door</span>$100</td>
+        </tr>
+        <tr>
+          <td>Standard Door <span class="tier-tag">Vinyl</span></td>
+          <td class="desc">Thermofoil or vinyl-wrapped doors. We strip the wrap, seal the MDF, prime, and spray. Permanent — will not peel again.</td>
+          <td class="price"><span class="from">per door</span>$100</td>
+        </tr>
+        <tr>
+          <td>Drawer Face <span class="tier-tag">Vinyl</span></td>
+          <td class="desc">Vinyl-wrapped drawer faces. Same complete stripping and refinishing process.</td>
+          <td class="price"><span class="from">per face</span>$75</td>
+        </tr>
+        <tr>
+          <td>Pantry &amp; Oversized <span class="tier-tag">Vinyl</span></td>
+          <td class="desc">Oversized doors with existing vinyl or thermofoil wrap.</td>
+          <td class="price"><span class="from">per door</span>$120</td>
+        </tr>
+        <tr>
+          <td>Deep Clean <span class="tier-tag">Add-On</span></td>
+          <td class="desc">Heavy grease or exhaust contamination beyond standard prep. Assessed visually at drop-off — you're told before we proceed.</td>
+          <td class="price"><span class="from">per piece</span>$15</td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="margin-top:20px;" class="reveal">
+      <div class="callout">
+        <div class="callout-label">Sanding, Prep, Primer &amp; Spray Application — All Included</div>
+        <p>Every line item above includes complete surface sanding, prep, primer where needed, HVLP spray application, and cure time. The only thing not included is the coating itself — because <strong>you buy it direct, at retail, with zero markup from us.</strong> We tell you exactly what to purchase and how much. Bring it sealed to drop-off.</p>
+      </div>
+    </div>
+    <div style="margin-top:24px;text-align:right;" class="reveal">
+      <a href="pages/pricing.html" class="btn-ghost" style="display:inline-block;">Full Pricing Breakdown</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STAT ROW ═══ -->
+<section style="background:var(--surface);">
+  <div class="wrap" style="padding:0;">
+    <div class="stat-row">
+      <div class="stat-cell reveal rd1">
+        <div class="stat-number">2<span class="unit">K</span></div>
+        <div class="stat-descriptor">Catalyzed Coating — Not Paint</div>
+      </div>
+      <div class="stat-cell reveal rd2">
+        <div class="stat-number">10<span class="unit">–20</span></div>
+        <div class="stat-descriptor">Year Expected Finish Lifespan</div>
+      </div>
+      <div class="stat-cell reveal rd3">
+        <div class="stat-number">0<span class="unit">%</span></div>
+        <div class="stat-descriptor">Material Markup. Ever.</div>
+      </div>
+      <div class="stat-cell reveal rd4">
+        <div class="stat-number">$0</div>
+        <div class="stat-descriptor">Due At Drop-Off</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY CDL ═══ -->
+<section class="section" style="background:var(--black);">
+  <div class="wrap">
+    <div class="section-header-split" style="margin-bottom:60px;">
+      <div>
+        <p class="section-label reveal">Why It Matters</p>
+        <h2 class="reveal rd1">The Difference Between<br />Sprayed &amp; Painted<br />Is Not Subtle.</h2>
+      </div>
+      <div class="reveal rd2">
+        <div class="pull-quote">
+          Brush-and-roll cabinet work shows every lap line, every stroke, every corner cut.<br />
+          <em>Ours doesn't.</em>
+        </div>
+      </div>
+    </div>
+    <div class="why-grid">
+      <div class="why-cell reveal rd1">
+        <div class="why-cell-num">01</div>
+        <h4>Catalyzed 2K Coating</h4>
+        <p>Two-component polyurethane that cures by chemical reaction — not evaporation. The finished film is harder than any latex or single-component paint, resists moisture and grease, and holds its color for a decade or more. This is what production cabinet shops spray on new doors before they ship to dealers.</p>
+      </div>
+      <div class="why-cell reveal rd2">
+        <div class="why-cell-num">02</div>
+        <h4>Turbine HVLP Application</h4>
+        <p>High-volume low-pressure atomization produces a spray pattern that lays flat and smooth at a level a brush or roller physically cannot achieve. No lap marks. No texture. No build-up in corners. The kind of finish you run your hand across and feel nothing — because there's nothing to feel.</p>
+      </div>
+      <div class="why-cell reveal rd3">
+        <div class="why-cell-num">03</div>
+        <h4>You Buy The Coating</h4>
+        <p>No material markup — ever. You purchase the 2K coating directly at retail. You know exactly what went on your doors. You keep the leftovers for touch-ups years from now. We earn our money on craftsmanship, not on hiding a margin inside a materials line.</p>
+      </div>
+      <div class="why-cell reveal rd4">
+        <div class="why-cell-num">04</div>
+        <h4>Years In Fine Finish</h4>
+        <p>Cabinet Door Lab is run by a finisher with a long background in construction and fine finish work. Not a painting company that decided cabinets were a good add-on. Someone who has cared about surface quality for years and built this service specifically to do one thing at a level most people in this market never see.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COATING SPEC ═══ -->
+<section class="section" style="background:var(--surface);">
+  <div class="wrap">
+    <div class="coating-intro">
+      <div class="reveal">
+        <p class="section-label">The Material</p>
+        <h2 style="margin-bottom:28px;">Why 2K Coating<br />Is In A Different<br />Class Entirely.</h2>
+        <p style="margin-bottom:20px;">The cabinet painting industry runs on latex. It's easy to buy, easy to apply with a brush, and easy to sell to homeowners who don't know what their finish actually is. The problem is that latex paint — even expensive "cabinet-specific" formulas — is a soft film that wears, yellows, and peels under real kitchen conditions within a few years.</p>
+        <p style="margin-bottom:20px;">A catalyzed 2K polyurethane cures by a chemical cross-linking reaction that produces a polymer matrix harder than what any single-component paint can achieve. It resists the daily abuse of a working kitchen — grease, steam, cleaning products, impact — at a level that latex simply cannot match.</p>
+        <p style="margin-bottom:36px;">We spray it through a professional turbine HVLP system that atomizes the material into a flat, even film. The result is a finish that looks and performs like what came out of the factory — because that's the same class of material and the same method of application.</p>
+        <a href="pages/coating-guide.html" class="btn-primary">Full 2K Coating Guide</a>
+      </div>
+      <div class="reveal rd2">
+        <div class="coating-specs">
+          <div class="coating-spec-row">
+            <div class="coating-spec-cell"><div class="coating-spec-label">Cure Mechanism</div><div class="coating-spec-val"><strong>Chemical Cross-Link</strong></div></div>
+            <div class="coating-spec-cell"><div class="coating-spec-label">Latex Paint</div><div class="coating-spec-val">Evaporation only</div></div>
+          </div>
+          <div class="coating-spec-row">
+            <div class="coating-spec-cell"><div class="coating-spec-label">Film Hardness</div><div class="coating-spec-val"><strong>Automotive Grade</strong></div></div>
+            <div class="coating-spec-cell"><div class="coating-spec-label">Latex Paint</div><div class="coating-spec-val">Soft film, mars easily</div></div>
+          </div>
+          <div class="coating-spec-row">
+            <div class="coating-spec-cell"><div class="coating-spec-label">Grease Resistance</div><div class="coating-spec-val"><strong>Excellent</strong></div></div>
+            <div class="coating-spec-cell"><div class="coating-spec-label">Latex Paint</div><div class="coating-spec-val">Poor to moderate</div></div>
+          </div>
+          <div class="coating-spec-row">
+            <div class="coating-spec-cell"><div class="coating-spec-label">Moisture Resistance</div><div class="coating-spec-val"><strong>Excellent</strong></div></div>
+            <div class="coating-spec-cell"><div class="coating-spec-label">Latex Paint</div><div class="coating-spec-val">Poor to moderate</div></div>
+          </div>
+          <div class="coating-spec-row">
+            <div class="coating-spec-cell"><div class="coating-spec-label">Color Stability</div><div class="coating-spec-val"><strong>Minimal Yellowing</strong></div></div>
+            <div class="coating-spec-cell"><div class="coating-spec-label">Oil-Based Paint</div><div class="coating-spec-val">Significant yellowing</div></div>
+          </div>
+          <div class="coating-spec-row" style="border-bottom:none;">
+            <div class="coating-spec-cell"><div class="coating-spec-label">Expected Lifespan</div><div class="coating-spec-val"><strong>10–20+ Years</strong></div></div>
+            <div class="coating-spec-cell"><div class="coating-spec-label">Latex Paint</div><div class="coating-spec-val">2–5 years in kitchen</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="section" style="background:var(--black);">
+  <div class="wrap">
+    <div class="copy-split">
+      <div class="reveal">
+        <p class="section-label">The Backstory</p>
+        <h2 style="margin-bottom:36px;">Spray Finishing<br />Has Always Been<br />The Part I Cared<br />Most About.</h2>
+        <a href="pages/about.html" class="btn-ghost" style="display:inline-block;">Full Story</a>
+      </div>
+      <div class="reveal rd2">
+        <p style="font-size:17px;line-height:1.8;margin-bottom:24px;color:var(--white2);">I spent years running a construction and fine finish company. The details that most contractors don't slow down for — trim work, millwork, spray finishing — that was the work I actually cared about. When you spend enough time in fine finish, you develop a standard for what a surface should look and feel like, and it becomes impossible to accept anything less.</p>
+        <p style="margin-bottom:24px;">A bad hernia and some health challenges forced me off the heavier physical side of contracting. The spray work stayed. Cabinet Door Lab is how I stay in the craft — in a shop, focused, doing the one part of the trade I've always been most serious about.</p>
+        <p style="margin-bottom:0;">Every door that comes through here gets sprayed by one person. The same person who answers your texts and assesses your doors at drop-off. There's no crew, no subcontractor, no variance in who's holding the gun from job to job. Just a finisher who gives a damn about the outcome.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICE AREA + CONTACT ═══ -->
+<section style="background:var(--surface);padding:80px 0 0;">
+  <div class="wrap">
+    <p class="section-label reveal">Service Area</p>
+    <h2 class="reveal rd1" style="margin-bottom:16px;">Based In Hickory, NC.<br />Worth The Drive<br />From Anywhere In The Corridor.</h2>
+    <p class="reveal rd2" style="max-width:640px;margin-bottom:48px;font-size:15px;">You load your doors in your vehicle and drive to us. The trip takes less time than scheduling around an in-home painter for three days. When you pick them up a week later, you'll understand why people make the drive from Charlotte.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:3px;margin-bottom:80px;" class="reveal rd3">
+      <span style="background:var(--surface2);padding:12px 20px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--white);border-top:2px solid var(--red);">Hickory</span>
+      <span style="background:var(--surface2);padding:12px 20px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--white2);">Statesville</span>
+      <span style="background:var(--surface2);padding:12px 20px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--white2);">Mooresville</span>
+      <span style="background:var(--surface2);padding:12px 20px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--white2);">Denver</span>
+      <span style="background:var(--surface2);padding:12px 20px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--white2);">Wilkesboro</span>
+      <span style="background:var(--surface2);padding:12px 20px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--white2);">Cornelius</span>
+      <span style="background:var(--surface2);padding:12px 20px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--white2);">Charlotte</span>
+      <span style="background:var(--surface2);padding:12px 20px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--white3);">+ Surrounding Areas</span>
+    </div>
+  </div>
+  <div class="wrap" style="padding-top:0;padding-bottom:0;">
+    <div class="contact-split">
+      <a href="sms:+19803910498" class="contact-half reveal rd1">
+        <div class="contact-half-label">Text — Fastest Response</div>
+        <div class="contact-half-value">(980) 391-0498</div>
+        <p class="contact-half-note">Tell us how many doors, what type, and your color preference. We'll quote you in minutes. Send a photo if you're unsure about condition or door type.</p>
+      </a>
+      <a href="mailto:orders@cabinetdoorlab.com" class="contact-half reveal rd2">
+        <div class="contact-half-label">Email</div>
+        <div class="contact-half-value">orders@<br />cabinetdoorlab.com</div>
+        <p class="contact-half-note">For detailed quotes, specific color questions, or if you want everything in writing before you commit.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA BAND ═══ -->
+<div class="cta-band">
+  <div class="wrap">
+    <div class="cta-band-inner">
+      <div>
+        <h2>Your Doors Are Ready<br />When You Are.</h2>
+        <p>Text us your count. We'll confirm pricing and current turnaround. Drop off when you're ready — $0 due until pickup.</p>
+      </div>
+      <div class="cta-band-actions">
+        <a href="pages/pricing.html" class="btn-white">Full Pricing</a>
+        <a href="pages/how-it-works.html" class="btn-ghost-white">How It Works</a>
+      </div>
+    </div>
   </div>
 </div>
 
-<!-- HOW IT WORKS -->
-<section class="section" style="background:var(--black);">
-  <div class="container">
-    <p class="label reveal">The Process</p>
-    <h2 class="reveal reveal-delay-1">Three Steps.<br />Kitchen Transformed.</h2>
-    <div class="hiw-grid">
-      <div class="hiw-card reveal reveal-delay-1">
-        <span class="hiw-bg-num">01</span>
-        <span class="hiw-icon">🚪</span>
-        <h3>You Remove Them</h3>
-        <p>Take down all cabinet doors and drawer faces. Remove every piece of hardware — hinges, pulls, handles, knobs, glass. Give them a basic wipe-down. That's your entire job.</p>
-        <a href="pages/how-it-works.html" style="display:inline-block;margin-top:20px;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);">Prep Guide →</a>
-      </div>
-      <div class="hiw-card reveal reveal-delay-2">
-        <span class="hiw-bg-num">02</span>
-        <span class="hiw-icon">🔫</span>
-        <h3>We Spray Them</h3>
-        <p>Drop off your doors and the 2K coating you purchased. We sand, prep, and spray every piece with a professional turbine HVLP system. Catalyzed finish. No brush marks. No shortcuts.</p>
-        <a href="pages/coating-guide.html" style="display:inline-block;margin-top:20px;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);">Coating Guide →</a>
-      </div>
-      <div class="hiw-card reveal reveal-delay-3">
-        <span class="hiw-bg-num">03</span>
-        <span class="hiw-icon">✅</span>
-        <h3>You Reinstall Them</h3>
-        <p>Pick up your doors looking brand new. Rehang, reattach hardware, and walk into a kitchen that feels like a full renovation — at a fraction of replacement cost. Pay at pickup.</p>
-        <a href="pages/pricing.html" style="display:inline-block;margin-top:20px;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);">View Pricing →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES PREVIEW -->
-<section class="section" style="background:var(--surface);">
-  <div class="container">
-    <p class="label reveal">What We Spray</p>
-    <h2 class="reveal reveal-delay-1">Every Door.<br />Every Drawer.</h2>
-    <div class="services-grid">
-      <a href="pages/services.html#standard" class="service-card reveal reveal-delay-1">
-        <span class="sc-icon">🚪</span>
-        <div>
-          <h3>Standard Cabinet Doors</h3>
-          <p>Shaker, flat-panel, raised-panel, slab — any standard cabinet door up to pantry size.</p>
-          <span class="sc-price">From $80/door</span>
-        </div>
-      </a>
-      <a href="pages/services.html#drawers" class="service-card reveal reveal-delay-2">
-        <span class="sc-icon">📦</span>
-        <div>
-          <h3>Drawer Faces</h3>
-          <p>All drawer front faces refinished to match your doors perfectly for a seamless kitchen look.</p>
-          <span class="sc-price">From $50/face</span>
-        </div>
-      </a>
-      <a href="pages/services.html#oversized" class="service-card reveal reveal-delay-3">
-        <span class="sc-icon">🏠</span>
-        <div>
-          <h3>Pantry &amp; Oversized Doors</h3>
-          <p>Full-height pantry doors and oversized cabinet doors handled with the same precision finish.</p>
-          <span class="sc-price">From $100/door</span>
-        </div>
-      </a>
-      <a href="pages/services.html#vinyl" class="service-card reveal reveal-delay-4">
-        <span class="sc-icon">🛡️</span>
-        <div>
-          <h3>Vinyl-Coated Doors</h3>
-          <p>Thermofoil or vinyl-wrapped doors? We strip, seal, prime, and spray to a factory-quality finish.</p>
-          <span class="sc-price">From $100/door</span>
-        </div>
-      </a>
-    </div>
-    <div style="text-align:center;margin-top:40px;" class="reveal">
-      <a href="pages/services.html" class="btn btn-ghost">View All Services</a>
-    </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<section class="stats-section">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item reveal">
-        <div class="num" data-count="100" data-suffix="%">0%</div>
-        <div class="lbl">Spray Applied</div>
-      </div>
-      <div class="stat-item reveal reveal-delay-1">
-        <div class="num" data-count="7" data-suffix=" Days">0 Days</div>
-        <div class="lbl">Avg Turnaround</div>
-      </div>
-      <div class="stat-item reveal reveal-delay-2">
-        <div class="num" data-count="2" data-suffix="K">0K</div>
-        <div class="lbl">Catalyzed Coating</div>
-      </div>
-      <div class="stat-item reveal reveal-delay-3">
-        <div class="num" data-count="0" data-suffix="$">$0</div>
-        <div class="lbl">Due At Drop-Off</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY CDL -->
-<section class="section" style="background:var(--black);">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
-      <div class="reveal">
-        <p class="label">Why Cabinet Door Lab</p>
-        <h2 style="margin-bottom:28px;">This Isn't<br />Paint &amp; Pray.</h2>
-        <p style="margin-bottom:20px;">Most cabinet painters brush or roll. The result looks painted — because it is. We spray every door with a professional turbine HVLP system, the same setup used in production cabinet shops.</p>
-        <p style="margin-bottom:20px;">The coating is a <strong>catalyzed 2K polyurethane</strong> — a two-part system that cures chemically to a finish that's harder, smoother, and more durable than anything you can roll on. It resists moisture, grease, cleaning products, and daily kitchen abuse.</p>
-        <p style="margin-bottom:36px;">Behind Cabinet Door Lab is a finisher with years of <strong>fine finish and construction experience</strong> — someone who cares about the outcome, not just the throughput.</p>
-        <a href="pages/about.html" class="btn btn-ghost">Our Story →</a>
-      </div>
-      <div class="reveal reveal-delay-2" style="display:flex;justify-content:center;">
-        <img src="images/logo-badge.png" alt="Cabinet Door Lab" style="width:min(340px,85%);filter:drop-shadow(0 0 60px rgba(232,57,47,0.2));" />
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA BAND -->
-<section class="cta-band" style="background:var(--surface);">
-  <div class="container">
-    <p class="label reveal">Ready To Get Started?</p>
-    <h2 class="reveal reveal-delay-1">Drop Off Your Doors.<br />Pick Up A New Kitchen.</h2>
-    <p class="reveal reveal-delay-2">Text or email us to get a quote, confirm turnaround time, or ask what coating to buy. Serving Hickory, Statesville, Mooresville, Charlotte &amp; surrounding areas.</p>
-    <div class="cta-btns reveal reveal-delay-3">
-      <a href="sms:+19803910498" class="btn btn-red">💬 Text Us: (980) 391-0498</a>
-      <a href="pages/contact.html" class="btn btn-outline">Get A Quote</a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
+<!-- ═══ FOOTER ═══ -->
 <footer>
-  <div class="container">
+  <div class="wrap">
     <div class="footer-grid">
-      <div class="footer-logo">
-        <img src="images/logo.png" alt="Cabinet Door Lab" />
-        <p class="footer-desc">Professional drop-off cabinet door refinishing. Catalyzed 2K coating, turbine HVLP spray system, factory-quality results. Hickory, NC &amp; surrounding areas.</p>
+      <div>
+        <img src="images/logo.png" alt="Cabinet Door Lab" class="footer-logo-img" />
+        <p class="footer-desc">Professional drop-off cabinet door refinishing. Catalyzed 2K coating applied with a turbine HVLP system. Factory-quality results without a contractor in your home. Hickory, NC area.</p>
       </div>
       <div class="footer-col">
         <h5>Services</h5>
@@ -365,7 +408,7 @@
         <ul class="footer-links">
           <li><a href="pages/how-it-works.html">How It Works</a></li>
           <li><a href="pages/pricing.html">Pricing</a></li>
-          <li><a href="pages/coating-guide.html">Coating Guide</a></li>
+          <li><a href="pages/coating-guide.html">2K Coating Guide</a></li>
           <li><a href="pages/gallery.html">Gallery</a></li>
           <li><a href="pages/faq.html">FAQ</a></li>
           <li><a href="pages/about.html">About</a></li>
@@ -382,8 +425,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Cabinet Door Lab · Hickory, NC · <a href="sms:+19803910498">(980) 391-0498</a></p>
-      <p class="footer-cities">Hickory · Statesville · Mooresville · Denver · Wilkesboro · Cornelius · Charlotte · NC</p>
+      <p>&copy; 2026 Cabinet Door Lab &middot; Hickory, NC &middot; <a href="sms:+19803910498" style="color:var(--red);">(980) 391-0498</a></p>
+      <p class="footer-cities">Hickory &middot; Statesville &middot; Mooresville &middot; Denver &middot; Wilkesboro &middot; Cornelius &middot; Charlotte &middot; NC</p>
     </div>
   </div>
 </footer>
