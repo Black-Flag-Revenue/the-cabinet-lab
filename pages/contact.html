@@ -3,224 +3,267 @@
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Cabinet Door Lab | Get A Quote — Hickory NC</title>
-  <meta name="description" content="Get a quote for cabinet door refinishing in Hickory, Statesville, Mooresville, Charlotte NC. Text (980) 391-0498 or email orders@cabinetdoorlab.com." />
+  <meta name="description" content="Get a quote for cabinet door refinishing in Hickory, Statesville, Mooresville, Charlotte NC. Text (980) 391-0498 or email orders@cabinetdoorlab.com. Pay at pickup." />
   <link rel="canonical" href="https://cabinetdoorlab.com/pages/contact.html" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
   <style>
-    .contact-layout { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; }
+    .contact-methods {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 3px; margin-top: 60px;
+    }
     .contact-method {
-      background:var(--surface); border:1px solid var(--border); border-radius:6px;
-      padding:40px 36px; text-decoration:none; color:var(--white);
-      display:block; transition:border-color 0.3s, box-shadow 0.3s, transform 0.3s;
-      margin-bottom:20px;
+      background: var(--surface); padding: 64px 56px;
+      text-decoration: none; color: inherit;
+      border-top: 3px solid transparent;
+      transition: background 0.3s, border-color 0.3s;
+      display: block;
     }
-    .contact-method:hover {
-      border-color:var(--red); color:var(--white);
-      box-shadow:0 12px 40px rgba(232,57,47,0.15);
-      transform:translateY(-4px);
+    .contact-method.primary { border-top-color: var(--red); }
+    .contact-method:hover { background: var(--surface2); }
+    .cm-tag {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--red);
+      margin-bottom: 20px; display: block;
     }
-    .cm-icon { font-size:40px; margin-bottom:16px; display:block; }
-    .cm-label { font-size:10px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--red); margin-bottom:6px; }
-    .cm-value { font-family:'Bebas Neue',sans-serif; font-size:30px; letter-spacing:0.02em; margin-bottom:8px; }
-    .cm-note { font-size:13px; color:var(--muted); }
-    .quote-form { background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:40px 36px; }
-    .form-group { margin-bottom:20px; }
-    .form-group label { display:block; font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted2); margin-bottom:8px; }
-    .form-group input, .form-group select, .form-group textarea {
-      width:100%; background:var(--surface2); border:1px solid var(--border2);
-      border-radius:4px; padding:13px 16px;
-      color:var(--white); font-family:'Inter',sans-serif; font-size:15px;
-      outline:none; transition:border-color 0.2s;
+    .cm-tag.secondary { color: var(--white3); }
+    .cm-value {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(28px, 3.5vw, 48px);
+      letter-spacing: 0.02em; line-height: 1.1;
+      color: var(--white); margin-bottom: 20px;
+      display: block;
     }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-      border-color:var(--red);
+    .cm-note { font-size: 14px; color: var(--white3); line-height: 1.75; }
+    .what-to-include {
+      margin-top: 60px; display: grid;
+      grid-template-columns: 1fr 1fr; gap: 3px;
     }
-    .form-group select option { background:var(--surface2); }
-    .form-group textarea { resize:vertical; min-height:120px; }
-    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-    .form-submit { width:100%; padding:16px; font-size:14px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; background:var(--red); color:var(--white); border:none; border-radius:4px; cursor:pointer; transition:background 0.2s, box-shadow 0.2s; }
-    .form-submit:hover { background:var(--red-dark); box-shadow:0 8px 28px var(--red-glow); }
-    .form-note { font-size:12px; color:var(--muted); margin-top:12px; text-align:center; }
-    .area-section { margin-top:60px; }
-    .area-map-placeholder {
-      background:var(--surface2); border:1px solid var(--border); border-radius:6px;
-      height:300px; display:flex; align-items:center; justify-content:center;
-      flex-direction:column; gap:12px; color:var(--muted);
+    .include-cell {
+      background: var(--surface2); padding: 36px 32px;
     }
-    @media(max-width:768px){ .contact-layout { grid-template-columns:1fr; } .form-row { grid-template-columns:1fr; } }
+    .include-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 11px; letter-spacing: 0.2em; color: var(--red);
+      margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
+    }
+    .include-num::after { content: ''; flex: 1; height: 1px; background: var(--rule2); }
+    .include-cell h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px; letter-spacing: 0.04em; margin-bottom: 8px;
+    }
+    .include-cell p { font-size: 13px; line-height: 1.75; }
+    .area-grid {
+      display: grid; grid-template-columns: repeat(4,1fr);
+      gap: 3px; margin-top: 48px;
+    }
+    .area-cell {
+      background: var(--surface); padding: 28px 24px;
+      transition: background 0.2s;
+    }
+    .area-cell:hover { background: var(--surface2); }
+    .area-county {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--red); margin-bottom: 12px;
+    }
+    .area-city {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px; letter-spacing: 0.04em; color: var(--white);
+      line-height: 1.3;
+    }
+    @media(max-width:1024px){ .area-grid { grid-template-columns: repeat(2,1fr); } }
+    @media(max-width:768px){
+      .contact-methods { grid-template-columns: 1fr; }
+      .contact-method { padding: 48px 32px; }
+      .what-to-include { grid-template-columns: 1fr; }
+      .area-grid { grid-template-columns: repeat(2,1fr); }
+    }
   </style>
 </head>
 <body>
+
 <nav id="nav">
   <div class="nav-inner">
     <a href="../index.html" class="nav-logo"><img src="../images/logo.png" alt="Cabinet Door Lab" /></a>
-    <ul class="nav-menu">
-      <li><a href="how-it-works.html">How It Works</a></li>
+    <ul class="nav-links">
+      <li><a href="how-it-works.html">Process</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="coating-guide.html">Coating Guide</a></li>
+      <li><a href="coating-guide.html">2K Coating</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="faq.html">FAQ</a></li>
-      <li><a href="contact.html" class="nav-cta active">Get A Quote</a></li>
     </ul>
+    <a href="contact.html" class="nav-cta-btn active">Get A Quote</a>
     <div class="nav-hamburger"><span></span><span></span><span></span></div>
   </div>
 </nav>
 
 <div class="page-hero">
-  <div class="container page-hero-content">
-    <p class="breadcrumb"><a href="../index.html">Home</a> → <span>Contact</span></p>
-    <p class="label">Get Started</p>
-    <h1>Let's Talk About<br />Your Doors.</h1>
-    <p>Text is fastest. Email works great for detailed quotes. We'll respond quickly with pricing and turnaround time.</p>
+  <div class="wrap">
+    <p class="breadcrumb"><a href="../index.html">Home</a> / <span>Contact</span></p>
+    <p class="section-label">Get Started</p>
+    <h1>Text Us.<br />We Respond Fast.</h1>
+    <p class="lead">No forms. No scheduling software. No call center. You text or email a real person who will be spraying your doors — and you get a quote back in minutes, not days.</p>
   </div>
 </div>
 
-<section class="section" style="background:var(--black);">
-  <div class="container">
-    <div class="contact-layout">
-      <div class="reveal">
-        <p class="label" style="margin-bottom:24px;">Reach Out Directly</p>
-        <a href="sms:+19803910498" class="contact-method">
-          <span class="cm-icon">💬</span>
-          <div class="cm-label">Text Us — Fastest Response</div>
-          <div class="cm-value">(980) 391-0498</div>
-          <p class="cm-note">Send a text with how many doors, what type, and your color preference. We'll quote you fast. You can also send a photo of your cabinets for us to assess.</p>
-        </a>
-        <a href="mailto:orders@cabinetdoorlab.com" class="contact-method">
-          <span class="cm-icon">✉️</span>
-          <div class="cm-label">Email Us</div>
-          <div class="cm-value">orders@<br/>cabinetdoorlab.com</div>
-          <p class="cm-note">Best for detailed quotes with multiple door types, specific color questions, or if you want a written estimate before committing.</p>
-        </a>
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:28px 32px;margin-top:4px;">
-          <h4 style="font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:0.05em;margin-bottom:12px;">What To Include In Your Message</h4>
-          <ul class="checklist">
-            <li>How many standard doors, drawer faces, and oversized doors</li>
-            <li>Whether any are vinyl/thermofoil wrapped</li>
-            <li>Your color preference (white, off-white, gray, custom)</li>
-            <li>Your general location (city/area)</li>
-            <li>Photo of your cabinets if you have questions about condition</li>
-          </ul>
-        </div>
-      </div>
+<!-- CONTACT METHODS -->
+<section style="background:var(--black);">
+  <div class="wrap" style="padding-top:80px;padding-bottom:100px;">
 
-      <div class="reveal reveal-delay-2">
-        <p class="label" style="margin-bottom:24px;">Or Fill Out A Quote Request</p>
-        <div class="quote-form">
-          <h3 style="margin-bottom:28px;">Get A Quote</h3>
-          <form action="mailto:orders@cabinetdoorlab.com" method="post" enctype="text/plain">
-            <div class="form-row">
-              <div class="form-group">
-                <label>First Name</label>
-                <input type="text" name="name" placeholder="John" required />
-              </div>
-              <div class="form-group">
-                <label>Last Name</label>
-                <input type="text" name="lastname" placeholder="Smith" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Phone Number</label>
-              <input type="tel" name="phone" placeholder="(704) 555-0100" />
-            </div>
-            <div class="form-group">
-              <label>Email Address</label>
-              <input type="email" name="email" placeholder="you@email.com" required />
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label># Standard Doors</label>
-                <input type="number" name="standard_doors" placeholder="0" min="0" />
-              </div>
-              <div class="form-group">
-                <label># Drawer Faces</label>
-                <input type="number" name="drawers" placeholder="0" min="0" />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label># Pantry / Oversized</label>
-                <input type="number" name="oversized" placeholder="0" min="0" />
-              </div>
-              <div class="form-group">
-                <label>Vinyl Coated?</label>
-                <select name="vinyl">
-                  <option value="no">No</option>
-                  <option value="yes">Yes</option>
-                  <option value="some">Some of them</option>
-                  <option value="unsure">Not sure</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Color Preference</label>
-              <select name="color">
-                <option>Bright White</option>
-                <option>Off-White / Cream</option>
-                <option>Soft Gray</option>
-                <option>Navy / Dark Color</option>
-                <option>Custom — I'll specify</option>
-                <option>Not sure yet</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Your City / Area</label>
-              <input type="text" name="city" placeholder="Mooresville, NC" />
-            </div>
-            <div class="form-group">
-              <label>Anything Else?</label>
-              <textarea name="message" placeholder="Condition notes, questions, timeline, etc."></textarea>
-            </div>
-            <button type="submit" class="form-submit">Send Quote Request →</button>
-            <p class="form-note">This form opens your email app. You can also copy this info and text it to (980) 391-0498.</p>
-          </form>
+    <div class="contact-methods reveal">
+      <a href="sms:+19803910498" class="contact-method primary">
+        <span class="cm-tag">Text — Fastest Response</span>
+        <span class="cm-value">(980) 391-0498</span>
+        <p class="cm-note">The fastest way to get a quote. Tell us how many doors you have, what type, and your color preference. We'll send a number back in minutes. You can also text a photo of your cabinets if you're unsure about condition or door type — seeing it is always faster than describing it.</p>
+      </a>
+      <a href="mailto:orders@cabinetdoorlab.com" class="contact-method">
+        <span class="cm-tag secondary">Email</span>
+        <span class="cm-value">orders@<br />cabinetdoorlab.com</span>
+        <p class="cm-note">Better for detailed questions, specific color requests, or if you want everything in writing before you commit. We check email regularly and respond the same day during normal business hours.</p>
+      </a>
+    </div>
+
+    <!-- WHAT TO INCLUDE -->
+    <div class="reveal" style="margin-top:80px;">
+      <p class="section-label">What To Tell Us</p>
+      <h2 style="margin-bottom:16px;font-size:clamp(32px,4vw,52px);">Everything We Need<br />To Quote Your Job.</h2>
+      <p style="max-width:560px;margin-bottom:0;font-size:15px;">The more detail you give us upfront, the faster we can get you an accurate number. Here's what we need.</p>
+    </div>
+    <div class="what-to-include reveal rd2">
+      <div class="include-cell">
+        <div class="include-num">01</div>
+        <h4>Door &amp; Drawer Count</h4>
+        <p>How many standard cabinet doors, drawer faces, and pantry or oversized doors you have. An exact count gets you an exact quote. A rough count gets you a ballpark — which is fine if you're just exploring.</p>
+      </div>
+      <div class="include-cell">
+        <div class="include-num">02</div>
+        <h4>Surface Type</h4>
+        <p>Are any of your doors or drawer faces wrapped in vinyl or thermofoil? These go on the vinyl-coated tier and are priced differently. If you're not sure, text us a photo — we can tell from a picture.</p>
+      </div>
+      <div class="include-cell">
+        <div class="include-num">03</div>
+        <h4>Color Preference</h4>
+        <p>White, off-white, gray, navy, or something else? If you have a specific paint color in mind from another manufacturer, note the color name or code and we'll advise on matching it in the 2K system.</p>
+      </div>
+      <div class="include-cell">
+        <div class="include-num">04</div>
+        <h4>Your General Location</h4>
+        <p>City or area you're coming from. Helps us confirm you're in our drop-off range and gives us context for scheduling. If you're coming from Charlotte or further, we can flag anything worth knowing before you make the drive.</p>
+      </div>
+    </div>
+
+    <!-- WHAT HAPPENS NEXT -->
+    <div style="margin-top:80px;" class="reveal">
+      <p class="section-label">After You Reach Out</p>
+      <h2 style="margin-bottom:40px;font-size:clamp(32px,4vw,52px);">Here's Exactly<br />What Happens Next.</h2>
+      <div style="border-top:1px solid var(--rule);">
+        <div style="display:grid;grid-template-columns:60px 1fr;gap:32px;padding:36px 0;border-bottom:1px solid var(--rule);">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.2em;color:var(--red);padding-top:4px;">01</div>
+          <div>
+            <h4 style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.04em;margin-bottom:8px;">We Quote You</h4>
+            <p style="font-size:14px;max-width:560px;">Based on your door count and types, we send back a flat-rate total. No range. No "starting from." A specific number you can plan around.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:60px 1fr;gap:32px;padding:36px 0;border-bottom:1px solid var(--rule);">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.2em;color:var(--red);padding-top:4px;">02</div>
+          <div>
+            <h4 style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.04em;margin-bottom:8px;">We Specify The Coating</h4>
+            <p style="font-size:14px;max-width:560px;">We tell you exactly what 2K product to purchase, where to get it, and how much to buy for your job. You pick it up at a paint supply store — sealed, unmixed, ready to bring to drop-off.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:60px 1fr;gap:32px;padding:36px 0;border-bottom:1px solid var(--rule);">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.2em;color:var(--red);padding-top:4px;">03</div>
+          <div>
+            <h4 style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.04em;margin-bottom:8px;">You Schedule A Drop-Off</h4>
+            <p style="font-size:14px;max-width:560px;">Once you have your coating and your doors are stripped of hardware, we confirm a drop-off time. We give you the address and anything else you need to know before you arrive.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:60px 1fr;gap:32px;padding:36px 0;border-bottom:1px solid var(--rule);">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.2em;color:var(--red);padding-top:4px;">04</div>
+          <div>
+            <h4 style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.04em;margin-bottom:8px;">We Do The Work</h4>
+            <p style="font-size:14px;max-width:560px;">Full sanding, prep, spray, and cure. Approximately one week. We reach out when your doors are ready — you don't need to follow up.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:60px 1fr;gap:32px;padding:36px 0;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.2em;color:var(--red);padding-top:4px;">05</div>
+          <div>
+            <h4 style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.04em;margin-bottom:8px;">You Pick Up And Pay</h4>
+            <p style="font-size:14px;max-width:560px;">Come in, look at every piece, pay when you're satisfied. Take your doors home, hang them back up, and you have a kitchen that looks entirely different. That's the whole process.</p>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- SERVICE AREA -->
-    <div class="area-section reveal">
-      <p class="label">Service Area</p>
-      <h2 style="margin-bottom:32px;">We Serve The<br />Hickory NC Area</h2>
-      <div class="tag-group" style="margin-bottom:40px;">
-        <span class="tag">Hickory, NC</span>
-        <span class="tag">Statesville, NC</span>
-        <span class="tag">Mooresville, NC</span>
-        <span class="tag">Denver, NC</span>
-        <span class="tag">Wilkesboro, NC</span>
-        <span class="tag">Cornelius, NC</span>
-        <span class="tag">Charlotte, NC</span>
-        <span class="tag">Lake Norman Area</span>
-        <span class="tag">Western Piedmont NC</span>
-        <span class="tag">Catawba County</span>
-        <span class="tag">Iredell County</span>
-        <span class="tag">Lincoln County</span>
+    <div style="margin-top:80px;" class="reveal">
+      <p class="section-label">Service Area</p>
+      <h2 style="margin-bottom:16px;font-size:clamp(32px,4vw,52px);">Based In Hickory, NC.<br />Serving The Western<br />Piedmont &amp; Lake Norman Corridor.</h2>
+      <p style="max-width:600px;font-size:15px;margin-bottom:0;">Customers drive to our shop from across the region. The drive is worth it — two short trips in exchange for a finish that outlasts any in-home alternative by years.</p>
+      <div class="area-grid">
+        <div class="area-cell">
+          <div class="area-county">Catawba County · Home Base</div>
+          <div class="area-city">Hickory<br />Newton<br />Conover</div>
+        </div>
+        <div class="area-cell">
+          <div class="area-county">Iredell County</div>
+          <div class="area-city">Statesville<br />Mooresville<br />Troutman</div>
+        </div>
+        <div class="area-cell">
+          <div class="area-county">Lake Norman Area</div>
+          <div class="area-city">Denver<br />Cornelius<br />Huntersville</div>
+        </div>
+        <div class="area-cell">
+          <div class="area-county">Greater Region</div>
+          <div class="area-city">Wilkesboro<br />Charlotte<br />+ Surrounding Areas</div>
+        </div>
       </div>
-      <div class="highlight-box">
-        <h4>Don't See Your City?</h4>
-        <p>If you're within reasonable driving distance of Hickory, NC, there's a good chance we can work with you. Text us your location and we'll confirm. As long as you can make it to us for drop-off and pickup, we can do the work.</p>
+      <div class="callout" style="margin-top:24px;">
+        <div class="callout-label">Not On This List?</div>
+        <p>If you can make the drive to Hickory, we can almost certainly work with you. Text us your location and we'll confirm. People make longer drives than you'd expect for a finish this good at this price.</p>
       </div>
     </div>
+
   </div>
 </section>
 
+<div class="cta-band">
+  <div class="wrap">
+    <div class="cta-band-inner">
+      <div>
+        <h2>The First Step Is<br />A Two-Line Text.</h2>
+        <p>Door count. Door type. That's all we need to start. Quote comes back in minutes.</p>
+      </div>
+      <div class="cta-band-actions">
+        <a href="sms:+19803910498" class="btn-white">Text (980) 391-0498</a>
+        <a href="mailto:orders@cabinetdoorlab.com" class="btn-ghost-white">orders@cabinetdoorlab.com</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <footer>
-  <div class="container">
+  <div class="wrap">
     <div class="footer-grid">
-      <div class="footer-logo"><img src="../images/logo.png" alt="Cabinet Door Lab" /><p class="footer-desc">Professional drop-off cabinet door refinishing. Catalyzed 2K coating, turbine HVLP. Hickory, NC &amp; surrounding areas.</p></div>
+      <div>
+        <img src="../images/logo.png" alt="Cabinet Door Lab" class="footer-logo-img" />
+        <p class="footer-desc">Professional drop-off cabinet door refinishing. Catalyzed 2K coating applied with a turbine HVLP system. Factory-quality results without a contractor in your home. Hickory, NC area.</p>
+      </div>
       <div class="footer-col"><h5>Services</h5><ul class="footer-links"><li><a href="services.html#standard">Standard Doors</a></li><li><a href="services.html#drawers">Drawer Faces</a></li><li><a href="services.html#oversized">Pantry Doors</a></li><li><a href="services.html#vinyl">Vinyl-Coated</a></li></ul></div>
-      <div class="footer-col"><h5>Information</h5><ul class="footer-links"><li><a href="how-it-works.html">How It Works</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="coating-guide.html">Coating Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
-      <div class="footer-col"><h5>Contact</h5><ul class="footer-links"><li><a href="sms:+19803910498">(980) 391-0498</a></li><li><a href="mailto:orders@cabinetdoorlab.com">orders@cabinetdoorlab.com</a></li><li><a href="contact.html">Get A Quote</a></li></ul></div>
+      <div class="footer-col"><h5>Information</h5><ul class="footer-links"><li><a href="how-it-works.html">How It Works</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="coating-guide.html">2K Coating Guide</a></li><li><a href="faq.html">FAQ</a></li><li><a href="about.html">About</a></li></ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul class="footer-links"><li><a href="sms:+19803910498">(980) 391-0498</a></li><li><a href="mailto:orders@cabinetdoorlab.com">orders@cabinetdoorlab.com</a></li><li><a href="service-area.html">Service Area</a></li></ul></div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Cabinet Door Lab · Hickory, NC</p>
-      <p class="footer-cities">Hickory · Statesville · Mooresville · Denver · Wilkesboro · Cornelius · Charlotte · NC</p>
+      <p>&copy; 2026 Cabinet Door Lab &middot; Hickory, NC &middot; <a href="sms:+19803910498" style="color:var(--red);">(980) 391-0498</a></p>
+      <p class="footer-cities">Hickory &middot; Statesville &middot; Mooresville &middot; Denver &middot; Wilkesboro &middot; Cornelius &middot; Charlotte &middot; NC</p>
     </div>
   </div>
 </footer>
+
 <script src="../js/main.js"></script>
-</body></html>
+</body>
+</html>
