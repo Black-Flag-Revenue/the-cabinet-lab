@@ -3,212 +3,367 @@
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How It Works | Cabinet Door Lab | Drop-Off Refinishing Process</title>
-  <meta name="description" content="Learn exactly how Cabinet Door Lab's drop-off cabinet door refinishing works. Remove hardware, drop off doors, we spray with 2K coating, you pick up. Hickory NC." />
+  <meta name="description" content="Exactly how Cabinet Door Lab's drop-off cabinet door refinishing works. Remove hardware, drop off doors with your 2K coating, we spray, you pick up and pay. Hickory NC." />
   <link rel="canonical" href="https://cabinetdoorlab.com/pages/how-it-works.html" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
   <style>
-    .step-section { padding:80px 0; border-bottom:1px solid var(--border); }
-    .step-section:last-of-type { border-bottom:none; }
-    .step-layout { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
-    .step-layout.reverse { direction:rtl; }
-    .step-layout.reverse > * { direction:ltr; }
-    .step-visual {
-      background:var(--surface2); border-radius:8px;
-      aspect-ratio:4/3; display:flex; align-items:center; justify-content:center;
-      font-size:100px; border:1px solid var(--border);
-      position:relative; overflow:hidden;
+    .step-block {
+      display: grid; grid-template-columns: 80px 1fr;
+      gap: 0; border-bottom: 1px solid var(--rule);
     }
-    .step-visual::before {
-      content:attr(data-num);
-      position:absolute; bottom:-10px; right:10px;
-      font-family:'Bebas Neue',sans-serif; font-size:160px;
-      color:rgba(232,57,47,0.07); line-height:1; pointer-events:none;
+    .step-block:first-of-type { border-top: 1px solid var(--rule); }
+    .step-index {
+      padding: 60px 0 60px 0;
+      border-right: 1px solid var(--rule);
+      display: flex; align-items: flex-start; justify-content: center;
+      padding-top: 64px;
     }
-    .step-num {
-      font-family:'Bebas Neue',sans-serif; font-size:90px; line-height:1;
-      color:rgba(232,57,47,0.15); margin-bottom:-10px;
+    .step-index-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 13px; letter-spacing: 0.2em; color: var(--red);
+      writing-mode: vertical-rl; text-orientation: mixed;
+      transform: rotate(180deg);
     }
-    .step-content h2 { margin-bottom:20px; }
-    .step-content p { margin-bottom:16px; }
-    .prep-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:60px; }
-    .timeline {
-      position:relative; padding-left:36px;
-      border-left:2px solid var(--border);
+    .step-body { padding: 60px 0 60px 60px; }
+    .step-body h2 { margin-bottom: 20px; }
+    .step-body .step-lead {
+      font-size: 17px; color: var(--white2); line-height: 1.8;
+      max-width: 640px; margin-bottom: 32px;
     }
-    .timeline-item { margin-bottom:36px; position:relative; }
-    .timeline-item::before {
-      content:''; position:absolute; left:-42px; top:6px;
-      width:12px; height:12px; border-radius:50%;
-      background:var(--red); border:2px solid var(--black);
+    .step-body p {
+      font-size: 15px; color: var(--white2); line-height: 1.85;
+      max-width: 640px; margin-bottom: 20px;
     }
-    .timeline-item h4 { font-family:'Bebas Neue',sans-serif; font-size:20px; letter-spacing:0.05em; margin-bottom:6px; color:var(--white); }
-    .timeline-item p { font-size:14px; color:rgba(245,245,245,0.65); margin:0; }
+    .step-body p:last-of-type { margin-bottom: 0; }
+    .step-detail-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 3px; margin-top: 40px;
+    }
+    .step-detail-cell {
+      background: var(--surface2); padding: 28px 32px;
+    }
+    .step-detail-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--red); margin-bottom: 10px;
+    }
+    .step-detail-cell p {
+      font-size: 13px; color: var(--white3); line-height: 1.75; margin: 0;
+    }
+    .inside-look {
+      border-top: 1px solid var(--rule);
+      padding: 100px 0;
+    }
+    .inside-timeline { margin-top: 60px; }
+    .timeline-row {
+      display: grid; grid-template-columns: 200px 1fr;
+      gap: 0; border-bottom: 1px solid var(--rule);
+    }
+    .timeline-row:first-child { border-top: 1px solid var(--rule); }
+    .timeline-phase {
+      padding: 28px 32px 28px 0;
+      border-right: 1px solid var(--rule);
+      display: flex; align-items: center;
+    }
+    .timeline-phase-name {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--red);
+    }
+    .timeline-content { padding: 28px 0 28px 40px; }
+    .timeline-content h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px; letter-spacing: 0.04em; margin-bottom: 8px;
+    }
+    .timeline-content p { font-size: 14px; line-height: 1.75; margin: 0; }
+    .prep-cols {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; margin-top: 60px;
+    }
+    .prep-col-label {
+      font-size: 13px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; margin-bottom: 24px;
+    }
+    .prep-col-label.yours { color: var(--white); }
+    .prep-col-label.ours { color: var(--white3); }
     @media(max-width:768px){
-      .step-layout, .step-layout.reverse { grid-template-columns:1fr; direction:ltr; gap:40px; }
-      .prep-grid { grid-template-columns:1fr; }
+      .step-block { grid-template-columns: 40px 1fr; }
+      .step-index { padding-top: 52px; }
+      .step-index-num { font-size: 11px; }
+      .step-body { padding: 52px 0 52px 28px; }
+      .step-detail-grid { grid-template-columns: 1fr; }
+      .timeline-row { grid-template-columns: 120px 1fr; }
+      .timeline-content { padding: 24px 0 24px 24px; }
+      .prep-cols { grid-template-columns: 1fr; gap: 48px; }
     }
   </style>
 </head>
 <body>
+
 <nav id="nav">
   <div class="nav-inner">
     <a href="../index.html" class="nav-logo"><img src="../images/logo.png" alt="Cabinet Door Lab" /></a>
-    <ul class="nav-menu">
-      <li><a href="how-it-works.html" class="active">How It Works</a></li>
+    <ul class="nav-links">
+      <li><a href="how-it-works.html" class="active">Process</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="coating-guide.html">Coating Guide</a></li>
+      <li><a href="coating-guide.html">2K Coating</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="faq.html">FAQ</a></li>
-      <li><a href="contact.html" class="nav-cta">Get A Quote</a></li>
     </ul>
+    <a href="contact.html" class="nav-cta-btn">Get A Quote</a>
     <div class="nav-hamburger"><span></span><span></span><span></span></div>
   </div>
 </nav>
 
+<!-- PAGE HERO -->
 <div class="page-hero">
-  <div class="container page-hero-content">
-    <p class="breadcrumb"><a href="../index.html">Home</a> → <span>How It Works</span></p>
-    <p class="label">The Process</p>
-    <h1>How It Works</h1>
-    <p>Three simple steps. Professional results. No mess in your home, no contractor scheduling, no markup on materials.</p>
+  <div class="wrap">
+    <p class="breadcrumb"><a href="../index.html">Home</a> / <span>How It Works</span></p>
+    <p class="section-label">The Process</p>
+    <h1>Simpler Than<br />You Think.</h1>
+    <p class="lead">Three steps. Your only job is to remove the hardware and show up twice — once to drop off, once to pick up. Everything in between is ours.</p>
   </div>
 </div>
 
-<section class="section" style="background:var(--black);">
-  <div class="container">
+<!-- THREE STEPS -->
+<section style="background:var(--black);">
+  <div class="wrap" style="padding-top:80px;padding-bottom:100px;">
+
     <!-- STEP 1 -->
-    <div class="step-section">
-      <div class="step-layout">
-        <div class="step-content reveal">
-          <div class="step-num">01</div>
-          <p class="label">Your Job</p>
-          <h2>You Remove Them</h2>
-          <p>This is the part that stays in your home. Take down every cabinet door and drawer face you want refinished. Remove all hardware from each piece — every hinge, every pull, every knob, every handle, every glass insert. If it's attached to the door, it comes off before drop-off.</p>
-          <p>Give each door a basic wipe-down to remove loose dust and surface debris. You don't need to sand, strip, or deep clean — just make sure they're not caked in grease. If they are, we offer a <strong>$15/piece deep clean add-on</strong> assessed at drop-off.</p>
-          <p><strong>Leave the cabinet boxes in your kitchen.</strong> We only spray the door panels — the boxes stay in place.</p>
-          <div class="highlight-box" style="margin-top:28px;">
-            <h4>Hardware Removal Is Required</h4>
-            <p>We cannot spray doors with hinges, hardware, or glass attached. If it arrives with hardware, we'll either return it or remove it and add a labor fee. Save yourself the hassle — strip it all before you drop off.</p>
+    <div class="step-block reveal">
+      <div class="step-index">
+        <div class="step-index-num">Step 01</div>
+      </div>
+      <div class="step-body">
+        <p class="section-label">Your Job</p>
+        <h2>Remove &amp; Drop Off</h2>
+        <p class="step-lead">Take every door and drawer face off the cabinet boxes. Strip all hardware from each piece. Give them a basic wipe-down. Load them in your vehicle along with the 2K coating you purchased, and bring them to our shop. That is the complete list of what you need to do before drop-off.</p>
+        <p>We do not need you to sand anything. We do not need the doors pre-cleaned beyond a basic wipe. We do not need you to fill holes or address surface damage — we'll assess that at drop-off. Your job is to remove, strip hardware, and transport.</p>
+        <p>Leave the cabinet boxes in your kitchen. We only refinish the door panels and drawer faces you bring to us. The boxes stay in place the entire time.</p>
+        <div class="step-detail-grid">
+          <div class="step-detail-cell">
+            <div class="step-detail-label">Hardware Removal — Non-Negotiable</div>
+            <p>Every hinge, pull, knob, handle, and glass insert must be removed before drop-off. A door that arrives with hardware attached will either be returned or have a removal charge added. There is no workaround — we cannot spray over hardware.</p>
+          </div>
+          <div class="step-detail-cell">
+            <div class="step-detail-label">What To Bring</div>
+            <p>Your doors and drawer faces, fully stripped of hardware. The sealed, unmixed 2K coating we specified in your quote. That is everything. We handle the rest from that point forward.</p>
+          </div>
+          <div class="step-detail-cell">
+            <div class="step-detail-label">Vinyl-Wrapped Doors</div>
+            <p>If any of your doors have thermofoil or vinyl wrap, tell us when you book. They're handled differently and priced at a separate tier. Don't sand them or try to remove the wrap yourself — we strip it as part of our process.</p>
+          </div>
+          <div class="step-detail-cell">
+            <div class="step-detail-label">$0 Due At Drop-Off</div>
+            <p>You do not pay anything when you drop off your doors. Nothing is due until you pick up and approve the work. Drop-off is just the handoff — the financial transaction happens at the end.</p>
           </div>
         </div>
-        <div class="step-visual reveal reveal-delay-2" data-num="01">🚪</div>
       </div>
     </div>
 
     <!-- STEP 2 -->
-    <div class="step-section">
-      <div class="step-layout reverse">
-        <div class="step-content reveal">
-          <div class="step-num">02</div>
-          <p class="label">Our Job</p>
-          <h2>We Spray Them</h2>
-          <p>Drop off your doors along with the 2K catalyzed coating you purchased (we'll tell you exactly what to buy — see the <a href="coating-guide.html">Coating Guide</a>). Drop-off payment is <strong>$0 — you pay at pickup</strong>.</p>
-          <p>Once in our shop, every door goes through a full professional process:</p>
-          <div class="timeline" style="margin-top:28px;">
-            <div class="timeline-item">
-              <h4>Inspection</h4>
-              <p>We assess every piece for prep needs — condition, existing finish, vinyl wrap, damage. Any deep-clean add-ons are confirmed here.</p>
-            </div>
-            <div class="timeline-item">
-              <h4>Sanding & Surface Prep</h4>
-              <p>Full sanding to scuff the existing surface and create adhesion. We handle all of this — you don't need to sand anything.</p>
-            </div>
-            <div class="timeline-item">
-              <h4>Tack & Final Clean</h4>
-              <p>Surfaces are tacked clean immediately before spraying. No dust, no contamination in the finish.</p>
-            </div>
-            <div class="timeline-item">
-              <h4>HVLP Spray Application</h4>
-              <p>Applied with a professional turbine HVLP system using your 2K catalyzed coating. Multiple coats, factory-smooth results.</p>
-            </div>
-            <div class="timeline-item">
-              <h4>Cure Time</h4>
-              <p>2K coatings cure chemically. We allow proper cure time before release so your finish is hard and ready to handle on pickup.</p>
-            </div>
+    <div class="step-block reveal">
+      <div class="step-index">
+        <div class="step-index-num">Step 02</div>
+      </div>
+      <div class="step-body">
+        <p class="section-label">Our Job</p>
+        <h2>We Handle Everything</h2>
+        <p class="step-lead">From the moment your doors are in our shop, the process is entirely ours to manage. Sanding, prep, primer, spray application, cure time — every step happens here, on our timeline, to our standard.</p>
+        <p>Most customers have no idea how much happens between drop-off and the finished product. The spray itself is a relatively small portion of the total work. What takes time — and what determines whether the finish lasts 2 years or 20 — is everything that happens before the gun comes out.</p>
+        <p>Turnaround is typically about one week from drop-off, depending on current workload. We'll give you an honest estimate when you book, and we'll reach out when your doors are ready rather than making you check in repeatedly.</p>
+        <div class="step-detail-grid">
+          <div class="step-detail-cell">
+            <div class="step-detail-label">Inspection At Drop-Off</div>
+            <p>Every piece gets assessed when you arrive. We'll note condition issues, flag anything that qualifies for the deep clean add-on, identify vinyl-wrapped pieces, and confirm the complete job scope before you leave.</p>
+          </div>
+          <div class="step-detail-cell">
+            <div class="step-detail-label">Full Sanding &amp; Prep</div>
+            <p>Complete sanding of all surfaces prior to coating. Not a light scuff — a proper prep pass that creates the mechanical adhesion the coating needs to bond and hold long-term.</p>
+          </div>
+          <div class="step-detail-cell">
+            <div class="step-detail-label">Tack &amp; Final Clean</div>
+            <p>Immediately before spraying, every surface is tack-cleaned to remove any dust or contamination from the sanding process. This step happens right before the gun comes out — not hours earlier.</p>
+          </div>
+          <div class="step-detail-cell">
+            <div class="step-detail-label">HVLP Spray Application</div>
+            <p>Applied through a professional turbine HVLP system. Multiple coats with proper flash time between each. The coating is your 2K catalyzed material — the same spec we provided, mixed to ratio, applied correctly.</p>
+          </div>
+          <div class="step-detail-cell">
+            <div class="step-detail-label">Cure Time</div>
+            <p>2K coatings cure chemically. We do not release doors before they've reached proper hardness. A soft finish on pickup is a failure — we don't let that happen by rushing the cure.</p>
+          </div>
+          <div class="step-detail-cell">
+            <div class="step-detail-label">Pre-Release Inspection</div>
+            <p>We review every piece before contacting you for pickup. Anything that doesn't meet standard gets addressed before it leaves the shop, not after you've hung it back up and called us about it.</p>
           </div>
         </div>
-        <div class="step-visual reveal reveal-delay-2" data-num="02">🔫</div>
       </div>
     </div>
 
     <!-- STEP 3 -->
-    <div class="step-section">
-      <div class="step-layout">
-        <div class="step-content reveal">
-          <div class="step-num">03</div>
-          <p class="label">Back To You</p>
-          <h2>You Reinstall Them</h2>
-          <p>We'll reach out when your doors are ready — typically about a week from drop-off, depending on current workload. Come pick them up, inspect every piece, and <strong>pay at pickup</strong>. No payment until you're happy with the results.</p>
-          <p>Rehang your doors, reattach your hardware, and step back. The difference is immediately visible — a glass-smooth, factory-hard finish that looks like brand-new cabinetry at a fraction of replacement cost.</p>
-          <div class="highlight-box" style="margin-top:28px;">
-            <h4>Turnaround Time</h4>
-            <p>Typical turnaround is approximately one week. During busy periods it may be slightly longer — we'll always communicate clearly. Text us at (980) 391-0498 to confirm current availability before dropping off.</p>
+    <div class="step-block reveal">
+      <div class="step-index">
+        <div class="step-index-num">Step 03</div>
+      </div>
+      <div class="step-body">
+        <p class="section-label">The Finish Line</p>
+        <h2>Pick Up &amp; Pay</h2>
+        <p class="step-lead">We reach out when your doors are ready. You come in, look at every piece, and pay when you're satisfied. Not before. Then you take them home, hang them back up, reattach your hardware, and you have a kitchen that looks like a different room.</p>
+        <p>The reinstallation is the same process you did in reverse — hang the doors, attach the hardware, and you're done. Most customers are surprised by how straightforward the whole thing is once they've been through it. The prep work felt like a lot going in. The pickup feels like a transformation.</p>
+        <p>If for any reason something isn't right, we have that conversation at pickup before money changes hands. In practice that conversation hasn't been necessary — but the offer stands regardless.</p>
+        <div class="step-detail-grid">
+          <div class="step-detail-cell">
+            <div class="step-detail-label">We Contact You</div>
+            <p>You don't need to follow up to check on your job. We reach out when the doors are done, inspected, and ready for pickup. Typically around the one-week mark from drop-off.</p>
+          </div>
+          <div class="step-detail-cell">
+            <div class="step-detail-label">Inspect Everything</div>
+            <p>Look at every door and drawer face before you load them up. Ask questions. Look at the finish from different angles. That inspection is the point — not a formality.</p>
+          </div>
+          <div class="step-detail-cell">
+            <div class="step-detail-label">Pay At Pickup</div>
+            <p>Cash, check, Venmo, Zelle, or card. We'll confirm the method when you book. The total matches the quote we gave you at the outset, plus any add-ons confirmed at drop-off.</p>
+          </div>
+          <div class="step-detail-cell">
+            <div class="step-detail-label">Keep The Leftover Coating</div>
+            <p>The coating you purchased is yours. We use what the job requires and return the remainder. That leftover is your touch-up supply for years to come — same material, exact match.</p>
           </div>
         </div>
-        <div class="step-visual reveal reveal-delay-2" data-num="03">✅</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- INSIDE LOOK -->
+<section style="background:var(--surface);">
+  <div class="wrap">
+    <div class="inside-look">
+      <p class="section-label reveal">Inside The Shop</p>
+      <h2 class="reveal rd1">What Actually Happens<br />Between Drop-Off<br />And Pickup.</h2>
+      <p class="reveal rd2" style="max-width:600px;margin-top:16px;font-size:16px;">Most people think spray finishing is mostly spraying. It isn't. Here's the actual sequence every job goes through.</p>
+      <div class="inside-timeline reveal rd3">
+        <div class="timeline-row">
+          <div class="timeline-phase"><div class="timeline-phase-name">Day 1</div></div>
+          <div class="timeline-content">
+            <h4>Intake &amp; Assessment</h4>
+            <p>Every piece logged and inspected. Condition noted. Any add-ons confirmed. Job entered into the queue.</p>
+          </div>
+        </div>
+        <div class="timeline-row">
+          <div class="timeline-phase"><div class="timeline-phase-name">Prep Phase</div></div>
+          <div class="timeline-content">
+            <h4>Full Sanding</h4>
+            <p>All surfaces sanded for mechanical adhesion. The existing finish is scuffed to give the new coating something to bond to. This is the most time-consuming part of the job and the part most shortcuts skip.</p>
+          </div>
+        </div>
+        <div class="timeline-row">
+          <div class="timeline-phase"><div class="timeline-phase-name">If Needed</div></div>
+          <div class="timeline-content">
+            <h4>Primer Coats</h4>
+            <p>Where substrate condition or surface type requires it — vinyl-stripped MDF, heavily repaired surfaces — primer coats are applied and allowed to fully dry before topcoat work begins.</p>
+          </div>
+        </div>
+        <div class="timeline-row">
+          <div class="timeline-phase"><div class="timeline-phase-name">Spray Day</div></div>
+          <div class="timeline-content">
+            <h4>Tack, Mix, Spray</h4>
+            <p>Final tack cleaning. Coating mixed to ratio. Applied through the HVLP system in multiple coats with proper flash time between each. Environment controlled for dust and temperature.</p>
+          </div>
+        </div>
+        <div class="timeline-row">
+          <div class="timeline-phase"><div class="timeline-phase-name">Cure Phase</div></div>
+          <div class="timeline-content">
+            <h4>Full Chemical Cure</h4>
+            <p>2K coatings cure by chemical reaction, not just evaporation. This takes time. We don't rush it. Doors stay in the shop until the coating has reached proper hardness — not just surface-dry.</p>
+          </div>
+        </div>
+        <div class="timeline-row">
+          <div class="timeline-phase"><div class="timeline-phase-name">Before Pickup</div></div>
+          <div class="timeline-content">
+            <h4>Inspection &amp; Release</h4>
+            <p>Every piece reviewed before we contact you. Anything that doesn't pass gets addressed here, before it leaves the shop. Then we reach out and get you scheduled for pickup.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- DROP-OFF PREP CHECKLIST -->
-<section class="section" style="background:var(--surface);">
-  <div class="container">
-    <p class="label reveal">Before You Drop Off</p>
-    <h2 class="reveal reveal-delay-1">Your Complete<br />Prep Checklist</h2>
-    <div class="prep-grid">
-      <div class="reveal reveal-delay-1">
-        <h3 style="color:var(--red);font-size:20px;margin-bottom:20px;">✓ Do This</h3>
-        <ul class="checklist">
-          <li>Remove all doors and drawer faces from your cabinets</li>
-          <li>Remove every hinge, pull, knob, handle and glass insert</li>
-          <li>Wipe surfaces to remove loose dust and light surface debris</li>
-          <li>Purchase the 2K coating we specify (see Coating Guide)</li>
-          <li>Bring the coating with your doors at drop-off</li>
-          <li>Label or organize doors if you have a specific layout plan</li>
-          <li>Note any doors with vinyl/thermofoil wrap when you call/text</li>
+<!-- PREP CHECKLIST -->
+<section class="section" style="background:var(--black);">
+  <div class="wrap">
+    <p class="section-label reveal">Before You Arrive</p>
+    <h2 class="reveal rd1" style="margin-bottom:16px;">Your Complete<br />Drop-Off Checklist</h2>
+    <p class="reveal rd2" style="max-width:560px;margin-bottom:0;font-size:16px;">This is everything you need to have done before bringing your doors to us. Nothing more, nothing less.</p>
+    <div class="prep-cols">
+      <div class="reveal rd1">
+        <div class="prep-col-label yours">Your Responsibility</div>
+        <ul class="check-list">
+          <li>Remove all doors and drawer faces from cabinet boxes</li>
+          <li>Pull every hinge, pull, knob, handle, and glass insert from each piece</li>
+          <li>Wipe surfaces down — loose dust and light debris only</li>
+          <li>Contact us to confirm we have capacity and get your drop-off scheduled</li>
+          <li>Purchase the 2K coating we specified — bring it sealed and unmixed</li>
+          <li>Note any vinyl or thermofoil wrapped pieces when you book</li>
+          <li>Transport doors to our Hickory shop on your scheduled drop-off date</li>
         </ul>
       </div>
-      <div class="reveal reveal-delay-2">
-        <h3 style="color:var(--muted);font-size:20px;margin-bottom:20px;">✗ We Handle This</h3>
-        <ul class="checklist x">
+      <div class="reveal rd2">
+        <div class="prep-col-label ours">We Handle From Here</div>
+        <ul class="check-list x">
           <li>All sanding and surface preparation</li>
-          <li>Final tack and surface cleaning before spray</li>
-          <li>Primer coats where needed</li>
-          <li>Spray application and coat timing</li>
-          <li>Cure time management</li>
-          <li>Minor surface flaw assessment at drop-off</li>
-          <li>Vinyl wrap removal (on vinyl-coated tier)</li>
+          <li>Final tack cleaning before spray</li>
+          <li>Primer coats where required by substrate or condition</li>
+          <li>Coating mix ratios and pot life management</li>
+          <li>HVLP spray application and coat sequencing</li>
+          <li>Flash time and cure time management</li>
+          <li>Pre-release inspection of every piece</li>
+          <li>Vinyl stripping on vinyl-tier doors</li>
         </ul>
       </div>
-    </div>
-    <div style="text-align:center;margin-top:60px;" class="reveal">
-      <a href="pricing.html" class="btn btn-red" style="margin-right:16px;">View Pricing</a>
-      <a href="contact.html" class="btn btn-outline">Get A Quote</a>
     </div>
   </div>
 </section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="wrap">
+    <div class="cta-band-inner">
+      <div>
+        <h2>Questions Before<br />You Drop Off?</h2>
+        <p>Text us. We respond fast and we'd rather answer questions upfront than have you show up unsure about anything.</p>
+      </div>
+      <div class="cta-band-actions">
+        <a href="sms:+19803910498" class="btn-white">Text (980) 391-0498</a>
+        <a href="pricing.html" class="btn-ghost-white">View Pricing</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <footer>
-  <div class="container">
+  <div class="wrap">
     <div class="footer-grid">
-      <div class="footer-logo">
-        <img src="../images/logo.png" alt="Cabinet Door Lab" />
-        <p class="footer-desc">Professional drop-off cabinet door refinishing. Catalyzed 2K coating, turbine HVLP spray system, factory-quality results. Hickory, NC &amp; surrounding areas.</p>
+      <div>
+        <img src="../images/logo.png" alt="Cabinet Door Lab" class="footer-logo-img" />
+        <p class="footer-desc">Professional drop-off cabinet door refinishing. Catalyzed 2K coating applied with a turbine HVLP system. Factory-quality results without a contractor in your home. Hickory, NC area.</p>
       </div>
       <div class="footer-col"><h5>Services</h5><ul class="footer-links"><li><a href="services.html#standard">Standard Doors</a></li><li><a href="services.html#drawers">Drawer Faces</a></li><li><a href="services.html#oversized">Pantry Doors</a></li><li><a href="services.html#vinyl">Vinyl-Coated</a></li></ul></div>
-      <div class="footer-col"><h5>Information</h5><ul class="footer-links"><li><a href="how-it-works.html">How It Works</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="coating-guide.html">Coating Guide</a></li><li><a href="faq.html">FAQ</a></li><li><a href="about.html">About</a></li></ul></div>
+      <div class="footer-col"><h5>Information</h5><ul class="footer-links"><li><a href="how-it-works.html">How It Works</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="coating-guide.html">2K Coating Guide</a></li><li><a href="faq.html">FAQ</a></li><li><a href="about.html">About</a></li></ul></div>
       <div class="footer-col"><h5>Contact</h5><ul class="footer-links"><li><a href="sms:+19803910498">(980) 391-0498</a></li><li><a href="mailto:orders@cabinetdoorlab.com">orders@cabinetdoorlab.com</a></li><li><a href="contact.html">Get A Quote</a></li></ul></div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Cabinet Door Lab · Hickory, NC</p>
-      <p class="footer-cities">Hickory · Statesville · Mooresville · Denver · Wilkesboro · Cornelius · Charlotte · NC</p>
+      <p>&copy; 2026 Cabinet Door Lab &middot; Hickory, NC &middot; <a href="sms:+19803910498" style="color:var(--red);">(980) 391-0498</a></p>
+      <p class="footer-cities">Hickory &middot; Statesville &middot; Mooresville &middot; Denver &middot; Wilkesboro &middot; Cornelius &middot; Charlotte &middot; NC</p>
     </div>
   </div>
 </footer>
+
 <script src="../js/main.js"></script>
-</body></html>
+</body>
+</html>
