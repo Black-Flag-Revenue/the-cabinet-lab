@@ -2,267 +2,408 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pricing | Cabinet Door Lab | Cabinet Door Refinishing Costs NC</title>
-  <meta name="description" content="Transparent flat-rate pricing for cabinet door refinishing. Standard doors from $80, drawer faces $50, pantry doors $100. Vinyl-coated upcharge available. Hickory NC area." />
+  <title>Pricing | Cabinet Door Lab | What Does Cabinet Door Refinishing Cost?</title>
+  <meta name="description" content="Flat-rate pricing for professional cabinet door refinishing. Standard doors $80, drawer faces $50, pantry doors $100. 2K catalyzed coating. Hickory NC area." />
   <link rel="canonical" href="https://cabinetdoorlab.com/pages/pricing.html" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
   <style>
-    .pricing-tiers { display:grid; grid-template-columns:repeat(3,1fr); gap:3px; margin-top:60px; }
-    .tier {
-      background:var(--surface); padding:48px 36px;
-      position:relative; transition:background 0.3s;
+    .price-hero-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(80px, 12vw, 160px);
+      line-height: 1; letter-spacing: 0.02em;
+      color: var(--white);
     }
-    .tier:hover { background:var(--surface2); }
-    .tier.featured { background:var(--surface2); }
-    .tier-badge {
-      position:absolute; top:0; left:0; right:0; height:4px;
-      background:var(--border);
+    .price-hero-num span { color: var(--red); }
+    .tier-block { padding: 80px 0; border-bottom: 1px solid var(--rule); }
+    .tier-block:last-of-type { border-bottom: none; }
+    .tier-header {
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 40px; align-items: end;
+      margin-bottom: 40px;
     }
-    .tier.featured .tier-badge { background:var(--red); }
-    .tier-label {
-      font-size:10px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase;
-      color:var(--muted); margin-bottom:8px;
+    .tier-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(32px, 4vw, 52px);
+      letter-spacing: 0.03em; line-height: 1;
     }
-    .tier.featured .tier-label { color:var(--red); }
-    .tier h3 { font-size:28px; margin-bottom:8px; }
-    .tier-desc { font-size:14px; color:var(--muted); margin-bottom:32px; }
-    .tier-rows { border-top:1px solid var(--border); }
-    .tier-row {
-      display:flex; justify-content:space-between; align-items:center;
-      padding:16px 0; border-bottom:1px solid var(--border);
+    .tier-context { font-size: 14px; color: var(--white3); max-width: 480px; line-height: 1.75; margin-top: 12px; }
+    .tier-tag-large {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--red);
+      border: 1px solid var(--red); padding: 6px 14px;
+      white-space: nowrap; align-self: flex-start;
     }
-    .tier-row:last-child { border-bottom:none; }
-    .tier-row-name { font-size:14px; color:rgba(245,245,245,0.75); }
-    .tier-row-price {
-      font-family:'Bebas Neue',sans-serif; font-size:28px;
-      letter-spacing:0.02em; color:var(--white);
+    .billing-strip {
+      display: grid; grid-template-columns: repeat(4,1fr);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      margin: 80px 0;
     }
-    .tier.featured .tier-row-price { color:var(--red); }
-
-    .addon-section { margin-top:60px; }
-    .addon-card {
-      background:var(--surface); border:1px solid var(--border); border-radius:6px;
-      padding:36px; display:grid; grid-template-columns:1fr auto; gap:40px; align-items:center;
+    .billing-cell {
+      padding: 48px 36px;
+      border-right: 1px solid var(--rule);
     }
-    .addon-card + .addon-card { margin-top:20px; }
-    .addon-price {
-      text-align:right; flex-shrink:0;
+    .billing-cell:last-child { border-right: none; }
+    .billing-step-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 11px; letter-spacing: 0.2em; color: var(--red);
+      margin-bottom: 20px;
+      display: flex; align-items: center; gap: 10px;
     }
-    .how-billing { margin-top:60px; background:var(--surface2); border-radius:8px; padding:52px; }
-    .how-billing h2 { margin-bottom:40px; }
-    .billing-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
-    .billing-step { text-align:center; }
-    .billing-step .bs-icon { font-size:36px; margin-bottom:14px; display:block; }
-    .billing-step h4 { font-family:'Bebas Neue',sans-serif; font-size:18px; letter-spacing:0.05em; margin-bottom:8px; }
-    .billing-step p { font-size:13px; color:var(--muted); margin:0; }
-    .compare-section { margin-top:80px; }
-    .compare-table { width:100%; border-collapse:collapse; margin-top:32px; }
-    .compare-table th {
-      font-family:'Bebas Neue',sans-serif; font-size:18px; letter-spacing:0.05em;
-      padding:16px 20px; text-align:left; background:var(--surface2); color:var(--white);
+    .billing-step-num::after { content: ''; flex: 1; height: 1px; background: var(--rule2); }
+    .billing-cell h4 { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 0.04em; margin-bottom: 10px; }
+    .billing-cell p { font-size: 13px; line-height: 1.8; }
+    .compare-block { margin-top: 80px; }
+    .compare-row {
+      display: grid; grid-template-columns: 200px 1fr 1fr 1fr;
+      border-bottom: 1px solid var(--rule);
     }
-    .compare-table th:first-child { background:transparent; }
-    .compare-table th.highlight { color:var(--red); }
-    .compare-table td { padding:14px 20px; border-bottom:1px solid var(--border); font-size:14px; color:rgba(245,245,245,0.72); }
-    .compare-table td:first-child { color:var(--white); font-weight:600; }
-    .compare-table tr:hover td { background:rgba(255,255,255,0.02); }
-    .check { color:var(--red); font-weight:700; }
-    .x-mark { color:var(--muted); }
-    @media(max-width:768px){
-      .pricing-tiers { grid-template-columns:1fr; }
-      .billing-steps { grid-template-columns:repeat(2,1fr); }
-      .addon-card { grid-template-columns:1fr; gap:16px; }
-      .addon-price { text-align:left; }
-      .how-billing { padding:32px 24px; }
+    .compare-row.header { border-bottom: 2px solid var(--rule2); }
+    .compare-cell { padding: 18px 24px; font-size: 14px; color: var(--white2); }
+    .compare-cell:first-child { color: var(--white); font-weight: 600; font-size: 13px; }
+    .compare-cell.col-head {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--white3); padding: 16px 24px;
+    }
+    .compare-cell.col-head.ours { color: var(--red); }
+    .compare-cell.win { color: var(--white); font-weight: 600; }
+    .compare-row:hover .compare-cell { background: rgba(255,255,255,0.015); }
+    @media(max-width:1024px) { .billing-strip { grid-template-columns: repeat(2,1fr); } .billing-cell { border-bottom: 1px solid var(--rule); } }
+    @media(max-width:768px) {
+      .tier-header { grid-template-columns: 1fr; gap:16px; }
+      .billing-strip { grid-template-columns: 1fr; }
+      .billing-cell { border-right: none; }
+      .compare-row { grid-template-columns: 1fr 1fr; }
+      .compare-cell:nth-child(3), .compare-cell:nth-child(4),
+      .compare-cell.col-head:nth-child(3), .compare-cell.col-head:nth-child(4) { display: none; }
     }
   </style>
 </head>
 <body>
+
 <nav id="nav">
   <div class="nav-inner">
     <a href="../index.html" class="nav-logo"><img src="../images/logo.png" alt="Cabinet Door Lab" /></a>
-    <ul class="nav-menu">
-      <li><a href="how-it-works.html">How It Works</a></li>
+    <ul class="nav-links">
+      <li><a href="how-it-works.html">Process</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="pricing.html" class="active">Pricing</a></li>
-      <li><a href="coating-guide.html">Coating Guide</a></li>
+      <li><a href="coating-guide.html">2K Coating</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="faq.html">FAQ</a></li>
-      <li><a href="contact.html" class="nav-cta">Get A Quote</a></li>
     </ul>
+    <a href="contact.html" class="nav-cta-btn">Get A Quote</a>
     <div class="nav-hamburger"><span></span><span></span><span></span></div>
   </div>
 </nav>
 
+<!-- PAGE HERO -->
 <div class="page-hero">
-  <div class="container page-hero-content">
-    <p class="breadcrumb"><a href="../index.html">Home</a> → <span>Pricing</span></p>
-    <p class="label">Flat-Rate Pricing</p>
-    <h1>Simple. Transparent.<br />No Surprises.</h1>
-    <p>Every price is flat-rate per piece. No hourly rates, no hidden fees, no markup on materials. You buy the coating, we do the work, you pay at pickup.</p>
+  <div class="wrap">
+    <p class="breadcrumb"><a href="../index.html">Home</a> / <span>Pricing</span></p>
+    <p class="section-label">What It Costs</p>
+    <h1>Flat Rate.<br />Per Piece.<br />No Surprises.</h1>
+    <p class="lead">Every price on this page is exactly what you pay — no hidden fees, no material markup, no hourly rates that balloon on complex jobs. You buy the coating direct. We charge for the craftsmanship. You pay at pickup.</p>
   </div>
 </div>
 
+<!-- THE OPENING FRAME -->
 <section class="section" style="background:var(--black);">
-  <div class="container">
-    <p class="label reveal">Surface Pricing</p>
-    <h2 class="reveal reveal-delay-1">What Does It Cost?</h2>
-    <div class="pricing-tiers">
-      <div class="tier reveal reveal-delay-1">
-        <div class="tier-badge"></div>
-        <div class="tier-label">Clean Surface</div>
-        <h3>Standard Finish</h3>
-        <p class="tier-desc">Doors and faces that arrive hardware-free and reasonably clean, ready for sanding and spray.</p>
-        <div class="tier-rows">
-          <div class="tier-row"><span class="tier-row-name">Standard Door</span><span class="tier-row-price">$80</span></div>
-          <div class="tier-row"><span class="tier-row-name">Drawer Face</span><span class="tier-row-price">$50</span></div>
-          <div class="tier-row"><span class="tier-row-name">Oversized / Pantry Door</span><span class="tier-row-price">$100</span></div>
-        </div>
+  <div class="wrap">
+    <div class="copy-split">
+      <div class="reveal">
+        <p class="section-label">Put It In Perspective</p>
+        <h2 style="margin-bottom:28px;">A Typical Kitchen.<br />What You're Actually<br />Comparing Against.</h2>
+        <p style="margin-bottom:20px;">Ten standard doors and six drawer faces is a fairly common kitchen. At Cabinet Door Lab, that job runs <strong>$1,100 in labor</strong> — plus whatever you spend on the coating you purchase directly, typically $150 to $300 depending on quantity and color.</p>
+        <p style="margin-bottom:20px;">An in-home cabinet painter in this area will quote you somewhere between $1,500 and $4,000 for the same kitchen — and apply brush-and-roll latex that starts showing wear in two to three years in a busy kitchen environment.</p>
+        <p>Full cabinet replacement? You're looking at $5,000 on the low end and $20,000 or more if you want quality materials. And you still end up with a finish that came out of a production line, not a professional spray booth.</p>
       </div>
-      <div class="tier featured reveal reveal-delay-2">
-        <div class="tier-badge"></div>
-        <div class="tier-label">Vinyl / Thermofoil Wrapped</div>
-        <h3>Vinyl-Coated Finish</h3>
-        <p class="tier-desc">Doors with existing vinyl or thermofoil wrap that must be stripped, sealed, and primed before coating.</p>
-        <div class="tier-rows">
-          <div class="tier-row"><span class="tier-row-name">Standard Door</span><span class="tier-row-price">$100</span></div>
-          <div class="tier-row"><span class="tier-row-name">Drawer Face</span><span class="tier-row-price">$75</span></div>
-          <div class="tier-row"><span class="tier-row-name">Oversized / Pantry Door</span><span class="tier-row-price">$120</span></div>
-        </div>
-      </div>
-      <div class="tier reveal reveal-delay-3">
-        <div class="tier-badge"></div>
-        <div class="tier-label">Add-On Service</div>
-        <h3>Deep Clean</h3>
-        <p class="tier-desc">For doors with heavy grease, cooking buildup, or kitchen exhaust contamination beyond normal prep.</p>
-        <div class="tier-rows">
-          <div class="tier-row"><span class="tier-row-name">Per Door / Piece</span><span class="tier-row-price">$15</span></div>
-        </div>
-        <div class="highlight-box" style="margin-top:24px;">
-          <p>Assessed at drop-off after visual inspection. You'll be notified before we proceed. Doors should arrive reasonably clean — this covers heavy buildup we find in final prep, not a full degreasing service.</p>
+      <div class="reveal rd2">
+        <div style="border-top: 3px solid var(--red); padding-top: 40px;">
+          <div style="margin-bottom:48px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:8px;">Cabinet Door Lab — 10 Doors, 6 Drawers</div>
+            <div class="price-hero-num">$1<span>,</span>100</div>
+            <div style="font-size:13px;color:var(--white3);margin-top:8px;">Labor only. You buy the coating direct at retail — no markup.</div>
+          </div>
+          <div style="border-top:1px solid var(--rule);padding-top:32px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--white3);margin-bottom:16px;">The Alternatives</div>
+            <div style="display:flex;flex-direction:column;gap:14px;">
+              <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:14px;border-bottom:1px solid var(--rule);">
+                <span style="font-size:14px;color:var(--white3);">In-home cabinet painter</span>
+                <span style="font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--white3);">$1,500–$4,000+</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:baseline;">
+                <span style="font-size:14px;color:var(--white3);">Full cabinet replacement</span>
+                <span style="font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--white3);">$5,000–$20,000+</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- ADD-ONS -->
-    <div class="addon-section">
-      <p class="label reveal">Important Notes</p>
-      <h2 class="reveal reveal-delay-1" style="margin-bottom:32px;">What's Included &amp; What Isn't</h2>
-      <div class="addon-card reveal reveal-delay-1">
+<!-- PRICING TIERS -->
+<section style="background:var(--surface);">
+  <div class="wrap">
+
+    <!-- STANDARD -->
+    <div class="tier-block">
+      <div class="tier-header reveal">
         <div>
-          <h3 style="font-size:22px;margin-bottom:10px;">✓ Always Included In Your Price</h3>
-          <ul class="checklist" style="margin-top:12px;">
-            <li>Full sanding and surface prep</li>
-            <li>Tack and final surface clean before spray</li>
-            <li>Professional HVLP spray application</li>
-            <li>Multiple coats to spec</li>
-            <li>Primer where required</li>
-            <li>Proper cure time before release</li>
-          </ul>
+          <p class="section-label" style="margin-bottom:8px;">Standard Tier</p>
+          <div class="tier-name">Clean Surfaces</div>
+          <p class="tier-context">For doors and drawer faces that arrive hardware-free and reasonably clean — ready for sanding and spray. This covers the vast majority of kitchens.</p>
         </div>
-        <div class="addon-price">
-          <div class="price-big">$0<span> extra</span></div>
-          <p style="font-size:13px;color:var(--muted);margin-top:8px;">For what's listed above</p>
-        </div>
+        <div class="tier-tag-large">Most Common</div>
       </div>
-      <div class="addon-card reveal reveal-delay-2">
-        <div>
-          <h3 style="font-size:22px;margin-bottom:10px;">→ Not Included — Your Responsibility</h3>
-          <ul class="checklist neutral" style="margin-top:12px;">
-            <li>Purchasing the 2K catalyzed coating (we guide you on what and how much)</li>
-            <li>Hardware removal from all doors before drop-off</li>
-            <li>Transportation to and from our shop</li>
-            <li>Reinstallation of doors after pickup</li>
-          </ul>
-        </div>
-        <div class="addon-price">
-          <div class="price-big" style="font-size:36px;color:var(--muted);">Your<br/>Part</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- HOW BILLING WORKS -->
-    <div class="how-billing reveal">
-      <p class="label">How Payment Works</p>
-      <h2>Pay At Pickup. Always.</h2>
-      <div class="billing-steps" style="margin-top:40px;">
-        <div class="billing-step">
-          <span class="bs-icon">📞</span>
-          <h4>1. Get A Quote</h4>
-          <p>Text or email us with how many doors and what type. We confirm pricing and turnaround.</p>
-        </div>
-        <div class="billing-step">
-          <span class="bs-icon">🛒</span>
-          <h4>2. Buy The Coating</h4>
-          <p>We tell you exactly what 2K coating to buy and how much. You purchase it directly — no markup.</p>
-        </div>
-        <div class="billing-step">
-          <span class="bs-icon">🚗</span>
-          <h4>3. Drop Off</h4>
-          <p>Bring your doors and the coating. We inspect, confirm any add-ons, and get to work. $0 due now.</p>
-        </div>
-        <div class="billing-step">
-          <span class="bs-icon">💰</span>
-          <h4>4. Pay At Pickup</h4>
-          <p>We call when ready. You inspect the work. You pay. Simple as that.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- COMPARISON TABLE -->
-    <div class="compare-section reveal">
-      <p class="label">The Real Cost Comparison</p>
-      <h2>Why This Makes Financial Sense</h2>
-      <table class="compare-table">
+      <table class="services-table reveal">
         <thead>
           <tr>
-            <th></th>
-            <th class="highlight">Cabinet Door Lab</th>
-            <th>Cabinet Painter (In-Home)</th>
-            <th>Full Cabinet Replacement</th>
+            <th style="width:32%;">Surface</th>
+            <th>What's Included</th>
+            <th>Price Per Piece</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>Finish Quality</td><td><span class="check">2K catalyzed spray</span></td><td>Brush/roll latex</td><td>Factory finish</td></tr>
-          <tr><td>Mess In Your Home</td><td><span class="check">None — done off-site</span></td><td>Tape, plastic, fumes</td><td>Full demolition</td></tr>
-          <tr><td>Material Markup</td><td><span class="check">You buy direct</span></td><td>Contractor markup</td><td>Full retail + install</td></tr>
-          <tr><td>Typical 10-Door Kitchen</td><td><span class="check">~$800</span></td><td>$1,500–$3,500+</td><td>$5,000–$20,000+</td></tr>
-          <tr><td>Turnaround</td><td><span class="check">~1 week</span></td><td>Multiple days in-home</td><td>Weeks to months</td></tr>
-          <tr><td>You Reinstall</td><td><span class="check">Yes — simple re-hang</span></td><td>Sometimes included</td><td>Contractor included</td></tr>
+          <tr>
+            <td>Standard Door</td>
+            <td class="desc">Any door style — shaker, flat-panel, raised-panel, slab. Hardware removed before drop-off. Both sides fully sprayed and finished. Full sanding and surface prep, tack clean, HVLP spray application, and cure time.</td>
+            <td class="price"><span class="from">per door</span>$80</td>
+          </tr>
+          <tr>
+            <td>Drawer Face</td>
+            <td class="desc">All sizes. Hardware removed before drop-off. Sprayed to match your doors exactly — same coating, same process, same finish. Front and edges fully finished.</td>
+            <td class="price"><span class="from">per face</span>$50</td>
+          </tr>
+          <tr>
+            <td>Pantry &amp; Oversized Door</td>
+            <td class="desc">Full-height pantry doors and any oversized cabinet door beyond standard dimensions. More material, more time, same quality standard.</td>
+            <td class="price"><span class="from">per door</span>$100</td>
+          </tr>
         </tbody>
       </table>
     </div>
+
+    <!-- VINYL -->
+    <div class="tier-block">
+      <div class="tier-header reveal">
+        <div>
+          <p class="section-label" style="margin-bottom:8px;">Vinyl / Thermofoil Tier</p>
+          <div class="tier-name">Wrapped Surfaces</div>
+          <p class="tier-context">For doors and faces with existing vinyl or thermofoil wrap. This requires stripping the existing material, sealing the MDF core, priming, and then spraying. More steps, more labor — priced accordingly. The result is a permanent finish that will not peel again.</p>
+        </div>
+        <div class="tier-tag-large">Tell Us At Booking</div>
+      </div>
+      <table class="services-table reveal">
+        <thead>
+          <tr>
+            <th style="width:32%;">Surface</th>
+            <th>What's Included</th>
+            <th>Price Per Piece</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Standard Door <span class="tier-tag">Vinyl</span></td>
+            <td class="desc">Strip existing wrap, seal MDF core, prime, and spray with 2K catalyzed coating. No peeling. No bubbling. A hard, permanent finish over a properly prepared substrate.</td>
+            <td class="price"><span class="from">per door</span>$100</td>
+          </tr>
+          <tr>
+            <td>Drawer Face <span class="tier-tag">Vinyl</span></td>
+            <td class="desc">Same complete stripping, sealing, priming, and spray process on all drawer faces with existing vinyl wrap.</td>
+            <td class="price"><span class="from">per face</span>$75</td>
+          </tr>
+          <tr>
+            <td>Pantry &amp; Oversized <span class="tier-tag">Vinyl</span></td>
+            <td class="desc">Full strip and refinish process on oversized or full-height doors with existing vinyl or thermofoil wrap.</td>
+            <td class="price"><span class="from">per door</span>$120</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ADD-ON -->
+    <div class="tier-block">
+      <div class="tier-header reveal">
+        <div>
+          <p class="section-label" style="margin-bottom:8px;">Add-On</p>
+          <div class="tier-name">Deep Clean</div>
+          <p class="tier-context">We sand and prep every door as part of the standard price. When a door arrives with heavy grease, kitchen exhaust contamination, or serious buildup that goes beyond normal surface prep, we charge $15 per piece for the additional degreasing work. This is assessed visually at drop-off — you're told before we touch anything.</p>
+        </div>
+        <div class="tier-tag-large">Assessed At Drop-Off</div>
+      </div>
+      <table class="services-table reveal">
+        <thead>
+          <tr>
+            <th style="width:32%;">Service</th>
+            <th>When It Applies</th>
+            <th>Price Per Piece</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Deep Clean Add-On</td>
+            <td class="desc">Heavy caked-on grease or kitchen exhaust buildup well beyond what a basic wipe-down removes. Not a charge for normal kitchen use — this applies when contamination is significant enough to affect prep time and coating adhesion. You'll know at drop-off if it applies to your pieces.</td>
+            <td class="price"><span class="from">per piece</span>$15</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 </section>
 
-<section class="section" style="background:var(--surface);text-align:center;">
-  <div class="container">
-    <p class="label reveal">Ready To Move Forward?</p>
-    <h2 class="reveal reveal-delay-1">Text Us Your Door Count.<br />We'll Quote You In Minutes.</h2>
-    <p class="reveal reveal-delay-2" style="max-width:500px;margin:0 auto 40px;">Tell us how many standard doors, drawers, and oversized pieces you have — and whether any are vinyl-coated. That's all we need.</p>
-    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;" class="reveal reveal-delay-3">
-      <a href="sms:+19803910498" class="btn btn-red">💬 Text (980) 391-0498</a>
-      <a href="mailto:orders@cabinetdoorlab.com" class="btn btn-outline">Email A Quote Request</a>
+<!-- HOW BILLING WORKS -->
+<section class="section" style="background:var(--black);">
+  <div class="wrap">
+    <p class="section-label reveal">How Payment Works</p>
+    <h2 class="reveal rd1" style="margin-bottom:60px;">You Don't Pay Until<br />You See The Work.</h2>
+    <div class="billing-strip">
+      <div class="billing-cell reveal rd1">
+        <div class="billing-step-num">01</div>
+        <h4>Get A Quote</h4>
+        <p>Text or email us your door count, types, and color preference. We quote you within minutes. No obligation, no deposit required to get a number.</p>
+      </div>
+      <div class="billing-cell reveal rd2">
+        <div class="billing-step-num">02</div>
+        <h4>Buy The Coating</h4>
+        <p>We specify exactly what 2K coating to purchase and how much. You buy it directly from a paint supplier at retail. We don't touch that transaction — zero markup on your end.</p>
+      </div>
+      <div class="billing-cell reveal rd3">
+        <div class="billing-step-num">03</div>
+        <h4>Drop Off</h4>
+        <p>Bring your doors and the sealed coating to our Hickory shop. We inspect, confirm any add-ons, and log your job. You leave with a timeline and a $0 balance due.</p>
+      </div>
+      <div class="billing-cell reveal rd4">
+        <div class="billing-step-num">04</div>
+        <h4>Pay At Pickup</h4>
+        <p>We contact you when the work is done. You come in, look at every piece, and pay when you're satisfied. That's how a shop that stands behind its work operates.</p>
+      </div>
+    </div>
+
+    <!-- WHAT'S INCLUDED -->
+    <div class="copy-split" style="margin-top:80px;">
+      <div class="reveal">
+        <p class="section-label">What's In The Price</p>
+        <h2 style="margin-bottom:28px;">Every Line Item<br />Includes This.</h2>
+        <p style="margin-bottom:20px;">The per-piece price covers the complete finishing process — not just the spray time. There's a significant amount of prep work that goes into a finish before the gun comes out, and all of it is included.</p>
+        <p>The one thing not included is the coating itself — because you purchase it directly. We give you the exact spec and quantity. You buy it at retail with no markup from us.</p>
+      </div>
+      <div class="reveal rd2">
+        <ul class="check-list">
+          <li>Complete sanding of all surfaces prior to coating</li>
+          <li>Surface prep and degreasing to standard kitchen condition</li>
+          <li>Tack cleaning immediately before spray — no dust contamination</li>
+          <li>Primer coats where the substrate or condition requires it</li>
+          <li>Professional HVLP spray application — multiple coats to spec</li>
+          <li>Proper flash time between coats</li>
+          <li>Full cure time before release — no soft finish on pickup</li>
+          <li>Visual inspection of every piece before we contact you for pickup</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- COMPARISON -->
+<section class="section" style="background:var(--surface);">
+  <div class="wrap">
+    <p class="section-label reveal">The Honest Comparison</p>
+    <h2 class="reveal rd1" style="margin-bottom:16px;">What You Actually<br />Get For The Money.</h2>
+    <p class="reveal rd2" style="max-width:600px;margin-bottom:48px;">Most homeowners comparing cabinet finishing options are comparing price without comparing what the price gets them. Here's the real breakdown.</p>
+    <div class="compare-block reveal">
+      <div class="compare-row header">
+        <div class="compare-cell col-head"></div>
+        <div class="compare-cell col-head ours">Cabinet Door Lab</div>
+        <div class="compare-cell col-head">In-Home Painter</div>
+        <div class="compare-cell col-head">Full Replacement</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Finish Method</div>
+        <div class="compare-cell win">HVLP spray, 2K catalyzed polyurethane</div>
+        <div class="compare-cell">Brush or roller, latex paint</div>
+        <div class="compare-cell">Factory spray</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Finish Quality</div>
+        <div class="compare-cell win">Glass-smooth, no brush marks or texture</div>
+        <div class="compare-cell">Visible brush strokes, roller stipple</div>
+        <div class="compare-cell">Factory smooth</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Coating Durability</div>
+        <div class="compare-cell win">10–20+ years. Automotive-grade hardness.</div>
+        <div class="compare-cell">2–5 years before noticeable wear</div>
+        <div class="compare-cell">Factory coating lifespan</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Mess In Your Home</div>
+        <div class="compare-cell win">None. All work done off-site.</div>
+        <div class="compare-cell">Tape, plastic, fumes, days of access</div>
+        <div class="compare-cell">Full demolition and installation</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Material Markup</div>
+        <div class="compare-cell win">Zero. You buy direct at retail.</div>
+        <div class="compare-cell">Contractor markup hidden in total</div>
+        <div class="compare-cell">Full retail + install labor</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Typical 10-Door Kitchen</div>
+        <div class="compare-cell win" style="color:var(--red);font-weight:700;">~$1,100 labor + your coating</div>
+        <div class="compare-cell">$1,500–$4,000+</div>
+        <div class="compare-cell">$5,000–$20,000+</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Turnaround</div>
+        <div class="compare-cell win">~1 week, no one in your home</div>
+        <div class="compare-cell">Multiple days with contractor on-site</div>
+        <div class="compare-cell">Weeks to months</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="wrap">
+    <div class="cta-band-inner">
+      <div>
+        <h2>Text Us Your Count.<br />We'll Quote You In Minutes.</h2>
+        <p>How many standard doors, drawer faces, and oversized pieces. Whether any are vinyl-coated. Your color preference. That's all we need.</p>
+      </div>
+      <div class="cta-band-actions">
+        <a href="sms:+19803910498" class="btn-white">Text (980) 391-0498</a>
+        <a href="mailto:orders@cabinetdoorlab.com" class="btn-ghost-white">Email A Quote Request</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <footer>
-  <div class="container">
+  <div class="wrap">
     <div class="footer-grid">
-      <div class="footer-logo"><img src="../images/logo.png" alt="Cabinet Door Lab" /><p class="footer-desc">Professional drop-off cabinet door refinishing. Catalyzed 2K coating, turbine HVLP. Hickory, NC &amp; surrounding areas.</p></div>
-      <div class="footer-col"><h5>Services</h5><ul class="footer-links"><li><a href="services.html#standard">Standard Doors</a></li><li><a href="services.html#drawers">Drawer Faces</a></li><li><a href="services.html#oversized">Pantry Doors</a></li><li><a href="services.html#vinyl">Vinyl-Coated</a></li></ul></div>
-      <div class="footer-col"><h5>Information</h5><ul class="footer-links"><li><a href="how-it-works.html">How It Works</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="coating-guide.html">Coating Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
-      <div class="footer-col"><h5>Contact</h5><ul class="footer-links"><li><a href="sms:+19803910498">(980) 391-0498</a></li><li><a href="mailto:orders@cabinetdoorlab.com">orders@cabinetdoorlab.com</a></li><li><a href="contact.html">Get A Quote</a></li></ul></div>
+      <div>
+        <img src="../images/logo.png" alt="Cabinet Door Lab" class="footer-logo-img" />
+        <p class="footer-desc">Professional drop-off cabinet door refinishing. Catalyzed 2K coating applied with a turbine HVLP system. Factory-quality results without a contractor in your home. Hickory, NC area.</p>
+      </div>
+      <div class="footer-col"><h5>Services</h5><ul class="footer-links"><li><a href="services.html#standard">Standard Doors</a></li><li><a href="services.html#drawers">Drawer Faces</a></li><li><a href="services.html#oversized">Pantry Doors</a></li><li><a href="services.html#vinyl">Vinyl-Coated</a></li><li><a href="services.html#deepclean">Deep Clean Add-On</a></li></ul></div>
+      <div class="footer-col"><h5>Information</h5><ul class="footer-links"><li><a href="how-it-works.html">How It Works</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="coating-guide.html">2K Coating Guide</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul class="footer-links"><li><a href="sms:+19803910498">(980) 391-0498</a></li><li><a href="mailto:orders@cabinetdoorlab.com">orders@cabinetdoorlab.com</a></li><li><a href="service-area.html">Service Area</a></li><li><a href="contact.html">Get A Quote</a></li></ul></div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Cabinet Door Lab · Hickory, NC</p>
-      <p class="footer-cities">Hickory · Statesville · Mooresville · Denver · Wilkesboro · Cornelius · Charlotte · NC</p>
+      <p>&copy; 2026 Cabinet Door Lab &middot; Hickory, NC &middot; <a href="sms:+19803910498" style="color:var(--red);">(980) 391-0498</a></p>
+      <p class="footer-cities">Hickory &middot; Statesville &middot; Mooresville &middot; Denver &middot; Wilkesboro &middot; Cornelius &middot; Charlotte &middot; NC</p>
     </div>
   </div>
 </footer>
+
 <script src="../js/main.js"></script>
-</body></html>
+</body>
+</html>
