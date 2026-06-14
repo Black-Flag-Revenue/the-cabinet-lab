@@ -3,133 +3,208 @@
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Service Area | Cabinet Door Lab | Hickory, Statesville, Mooresville, Charlotte NC</title>
-  <meta name="description" content="Cabinet Door Lab serves Hickory, Statesville, Mooresville, Denver, Wilkesboro, Cornelius, Charlotte and the Lake Norman area with professional drop-off cabinet door refinishing." />
+  <meta name="description" content="Cabinet Door Lab serves Hickory, Statesville, Mooresville, Denver, Wilkesboro, Cornelius, and Charlotte NC with professional drop-off cabinet door refinishing. Based in Hickory, NC." />
   <link rel="canonical" href="https://cabinetdoorlab.com/pages/service-area.html" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
   <style>
-    .city-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:48px; }
-    .city-card {
-      background:var(--surface); border:1px solid var(--border); border-radius:6px;
-      padding:32px 28px; transition:border-color 0.3s, transform 0.3s;
+    .area-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 3px; margin-top: 60px;
     }
-    .city-card:hover { border-color:var(--red); transform:translateY(-3px); }
-    .city-name { font-family:'Bebas Neue',sans-serif; font-size:26px; letter-spacing:0.04em; margin-bottom:6px; }
-    .city-county { font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--red); margin-bottom:12px; }
-    .city-card p { font-size:14px; color:rgba(245,245,245,0.65); line-height:1.7; }
-    @media(max-width:768px){ .city-grid { grid-template-columns:1fr; } }
+    .area-cell {
+      background: var(--surface); padding: 44px 36px;
+      border-top: 2px solid transparent;
+      transition: background 0.3s;
+    }
+    .area-cell:hover { background: var(--surface2); }
+    .area-cell.home { border-top-color: var(--red); }
+    .area-county {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; margin-bottom: 12px;
+    }
+    .area-county.primary { color: var(--red); }
+    .area-county.secondary { color: var(--white3); }
+    .area-city {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 34px; letter-spacing: 0.03em;
+      color: var(--white); margin-bottom: 14px; line-height: 1;
+    }
+    .area-cell p { font-size: 13px; line-height: 1.8; }
+    .drive-row {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      margin-top: 80px;
+    }
+    .drive-cell {
+      padding: 48px 40px;
+      border-right: 1px solid var(--rule);
+    }
+    .drive-cell:last-child { border-right: none; }
+    .drive-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--white3); margin-bottom: 10px;
+    }
+    .drive-city {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 30px; letter-spacing: 0.03em;
+      color: var(--white); margin-bottom: 10px;
+    }
+    .drive-cell p { font-size: 13px; line-height: 1.8; }
+    @media(max-width:1024px){ .area-grid { grid-template-columns: repeat(2,1fr); } }
+    @media(max-width:768px){
+      .area-grid { grid-template-columns: 1fr; }
+      .drive-row { grid-template-columns: 1fr; }
+      .drive-cell { border-right: none; border-bottom: 1px solid var(--rule); }
+      .drive-cell:last-child { border-bottom: none; }
+    }
   </style>
 </head>
 <body>
+
 <nav id="nav">
   <div class="nav-inner">
     <a href="../index.html" class="nav-logo"><img src="../images/logo.png" alt="Cabinet Door Lab" /></a>
-    <ul class="nav-menu">
-      <li><a href="how-it-works.html">How It Works</a></li>
+    <ul class="nav-links">
+      <li><a href="how-it-works.html">Process</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="coating-guide.html">Coating Guide</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="coating-guide.html">2K Coating</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="faq.html">FAQ</a></li>
-      <li><a href="contact.html" class="nav-cta">Get A Quote</a></li>
     </ul>
+    <a href="contact.html" class="nav-cta-btn">Get A Quote</a>
     <div class="nav-hamburger"><span></span><span></span><span></span></div>
   </div>
 </nav>
 
 <div class="page-hero">
-  <div class="container page-hero-content">
-    <p class="breadcrumb"><a href="../index.html">Home</a> → <span>Service Area</span></p>
-    <p class="label">Where We Serve</p>
-    <h1>Serving Western<br />NC &amp; The<br />Lake Norman Area</h1>
-    <p>Cabinet Door Lab is based in Hickory, NC. Customers drop off from across the western Piedmont, Lake Norman corridor, and greater Charlotte area.</p>
+  <div class="wrap">
+    <p class="breadcrumb"><a href="../index.html">Home</a> / <span>Service Area</span></p>
+    <p class="section-label">Where We Serve</p>
+    <h1>Based In Hickory.<br />Worth The Drive.</h1>
+    <p class="lead">We are a drop-off service. Two trips — one to leave your doors, one to pick them up. No contractor in your home, no days of access, no scheduling around your household. The drive to Hickory is the trade-off. For most customers, it's an easy one.</p>
   </div>
 </div>
 
 <section class="section" style="background:var(--black);">
-  <div class="container">
-    <p class="label reveal">Primary Service Cities</p>
-    <h2 class="reveal reveal-delay-1">Drop-Off Cabinet Door<br />Refinishing Near You</h2>
-    <div class="city-grid">
-      <div class="city-card reveal reveal-delay-1">
-        <div class="city-name">Hickory, NC</div>
-        <div class="city-county">Catawba County · Home Base</div>
-        <p>Our home base. If you're in Hickory, you're as close as it gets. Cabinet door refinishing, drawer faces, pantry doors, vinyl-coated doors — full service for the Hickory area.</p>
+  <div class="wrap">
+
+    <p class="section-label reveal">Where Customers Come From</p>
+    <h2 class="reveal rd1" style="margin-bottom:16px;">Serving The Western<br />Piedmont &amp; Lake Norman<br />Corridor.</h2>
+    <p class="reveal rd2" style="max-width:580px;font-size:15px;margin-bottom:0;">As long as you can make the drive to our Hickory NC shop for drop-off and pickup, we can do the work. Here's where most of our customers come from.</p>
+
+    <div class="area-grid">
+      <div class="area-cell home reveal rd1">
+        <div class="area-county primary">Catawba County &mdash; Home Base</div>
+        <div class="area-city">Hickory</div>
+        <p>Our shop is here. The shortest trip in the service area. If you're in the Hickory area, you have direct access with no real drive to speak of.</p>
       </div>
-      <div class="city-card reveal reveal-delay-2">
-        <div class="city-name">Statesville, NC</div>
-        <div class="city-county">Iredell County</div>
-        <p>A quick drive to our Hickory shop. Many Statesville homeowners and remodelers use Cabinet Door Lab for kitchen updates — drop off your doors, pick them up a week later looking brand new.</p>
+      <div class="area-cell reveal rd2">
+        <div class="area-county secondary">Iredell County</div>
+        <div class="area-city">Statesville</div>
+        <p>A straightforward drive on I-40. Quick enough that most Statesville customers don't think twice about it once they understand what they're getting versus what a local painter delivers.</p>
       </div>
-      <div class="city-card reveal reveal-delay-3">
-        <div class="city-name">Mooresville, NC</div>
-        <div class="city-county">Iredell County · Lake Norman Area</div>
-        <p>Mooresville's growing housing market means more kitchen renovations. Drop-off cabinet door refinishing is the smart alternative to full cabinet replacement for Mooresville homeowners.</p>
+      <div class="area-cell reveal rd3">
+        <div class="area-county secondary">Iredell County</div>
+        <div class="area-city">Mooresville</div>
+        <p>One of the most active renovation markets in the region. Drop-off refinishing gives Mooresville homeowners a professional spray finish result without a contractor in the house for days.</p>
       </div>
-      <div class="city-card reveal reveal-delay-1">
-        <div class="city-name">Denver, NC</div>
-        <div class="city-county">Lincoln County · Lake Norman Area</div>
-        <p>Denver is one of the fastest-growing communities in the Lake Norman area. Cabinet Door Lab offers Denver homeowners a professional refinishing option without contractor scheduling hassles.</p>
+      <div class="area-cell reveal rd1">
+        <div class="area-county secondary">Lincoln County</div>
+        <div class="area-city">Denver</div>
+        <p>Lake Norman's fastest growing community. The drive to Hickory is manageable and the result — 2K catalyzed spray finish on your cabinet doors — isn't something you can get locally.</p>
       </div>
-      <div class="city-card reveal reveal-delay-2">
-        <div class="city-name">Wilkesboro, NC</div>
-        <div class="city-county">Wilkes County</div>
-        <p>Wilkesboro customers make the trip to our Hickory shop for results they can't get locally. Professional HVLP spray with catalyzed 2K coating isn't something you find at most local painters.</p>
+      <div class="area-cell reveal rd2">
+        <div class="area-county secondary">Mecklenburg County</div>
+        <div class="area-city">Cornelius</div>
+        <p>North Charlotte customers find us when they start comparing what in-home cabinet painters in their area charge versus what they get. The drive north makes financial and quality sense.</p>
       </div>
-      <div class="city-card reveal reveal-delay-3">
-        <div class="city-name">Cornelius, NC</div>
-        <div class="city-county">Mecklenburg County · Lake Norman</div>
-        <p>North Charlotte and Lake Norman communities like Cornelius are a drive but well worth it. Many Cornelius homeowners find our pricing beats any local option by a significant margin.</p>
+      <div class="area-cell reveal rd3">
+        <div class="area-county secondary">Wilkes County</div>
+        <div class="area-city">Wilkesboro</div>
+        <p>Customers make the drive from Wilkesboro for a professional spray finish with catalyzed 2K coating — a result that simply isn't available from local painters using brush-and-roll latex.</p>
       </div>
-      <div class="city-card reveal reveal-delay-1">
-        <div class="city-name">Charlotte, NC</div>
-        <div class="city-county">Mecklenburg County</div>
-        <p>Charlotte customers come to us for the quality and value. In-home cabinet painters in Charlotte run $2,000–$4,000+ for a typical kitchen. Cabinet Door Lab delivers a better finish for less.</p>
+      <div class="area-cell reveal rd1">
+        <div class="area-county secondary">Mecklenburg County</div>
+        <div class="area-city">Charlotte</div>
+        <p>In-home cabinet painters in Charlotte run $1,500 to $4,000 or more for a typical kitchen using latex. Two trips to Hickory in exchange for a better finish at a lower price is a trade most Charlotte customers make without hesitation once they understand the difference.</p>
       </div>
-      <div class="city-card reveal reveal-delay-2">
-        <div class="city-name">Newton, NC</div>
-        <div class="city-county">Catawba County</div>
-        <p>Newton is practically next door to our Hickory shop. If you're in Catawba County, you've got the easiest drop-off of anyone on this list.</p>
+      <div class="area-cell reveal rd2">
+        <div class="area-county secondary">Catawba County</div>
+        <div class="area-city">Newton &amp; Conover</div>
+        <p>Practically next door. If you're anywhere in Catawba County, you have one of the shortest drop-offs in our service area.</p>
       </div>
-      <div class="city-card reveal reveal-delay-3">
-        <div class="city-name">Surrounding Areas</div>
-        <div class="city-county">Western Piedmont NC</div>
-        <p>Not on this list? Text us your city. If you can make the drive to Hickory, we can almost certainly work with you. The quality of the finish is worth the trip.</p>
+      <div class="area-cell reveal rd3">
+        <div class="area-county secondary">Surrounding Areas</div>
+        <div class="area-city">Everywhere Else</div>
+        <p>Not on this list? Text us your city. If you can make the drive to Hickory, there's a good chance we can work with you. People travel further than you'd expect when the result is worth it.</p>
       </div>
     </div>
 
-    <div class="highlight-box" style="margin-top:60px;" class="reveal">
-      <h4>How The Drop-Off Model Works For You</h4>
-      <p>Unlike in-home painters, there's no contractor in your house and no scheduling around your household. Load your doors in your vehicle, drive to our Hickory shop, drop them off, and come back about a week later. It's the same trip you'd make to drop off dry cleaning — just with cabinet doors instead. The drive is worth it when the alternative is $3,000+ for a paint-and-pray in-home job.</p>
-    </div>
-
-    <div style="text-align:center;margin-top:60px;" class="reveal">
-      <p class="label">Ready?</p>
-      <h2 style="margin-bottom:20px;">Text Us From Wherever You Are.</h2>
-      <p style="max-width:480px;margin:0 auto 36px;color:rgba(245,245,245,0.7);">Tell us your city, how many doors you have, and what type. We'll confirm you're in our service range and give you a quote in minutes.</p>
-      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-        <a href="sms:+19803910498" class="btn btn-red">💬 Text (980) 391-0498</a>
-        <a href="contact.html" class="btn btn-outline">Get A Quote</a>
+    <div class="drive-row reveal" style="margin-top:80px;">
+      <div class="drive-cell">
+        <div class="drive-label">From</div>
+        <div class="drive-city">Mooresville</div>
+        <p>About 40 minutes. Two trips — under two hours of total drive time in exchange for a finish that outlasts in-home latex by a decade.</p>
+      </div>
+      <div class="drive-cell">
+        <div class="drive-label">From</div>
+        <div class="drive-city">Charlotte</div>
+        <p>About an hour. Charlotte in-home cabinet painters charge $1,500 to $4,000+. The drive pays for itself many times over on quality alone.</p>
+      </div>
+      <div class="drive-cell">
+        <div class="drive-label">From</div>
+        <div class="drive-city">Statesville</div>
+        <p>Under 30 minutes. Faster than finding a local painter who uses professional HVLP spray equipment and catalyzed 2K coating.</p>
       </div>
     </div>
+
+    <div style="margin-top:60px;" class="reveal">
+      <div class="callout">
+        <div class="callout-label">Why The Drop-Off Model Changes The Calculation</div>
+        <p>In-home cabinet painting means a contractor in your kitchen for multiple days — access to your home, fumes, overspray containment, and a schedule you arrange around theirs. Our model is two trips. You load your doors, drive to us, and come back a week later to a finish that a brush-and-roll painter isn't delivering at any price. Most customers who have done it say the drive was the least consequential part of the whole experience.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
+<div class="cta-band">
+  <div class="wrap">
+    <div class="cta-band-inner">
+      <div>
+        <h2>Confirm You're In Range.<br />Get A Quote While You're At It.</h2>
+        <p>Text us your city and door count. We'll confirm the drive works and have a number back to you in minutes.</p>
+      </div>
+      <div class="cta-band-actions">
+        <a href="sms:+19803910498" class="btn-white">Text (980) 391-0498</a>
+        <a href="contact.html" class="btn-ghost-white">Get A Quote</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <footer>
-  <div class="container">
+  <div class="wrap">
     <div class="footer-grid">
-      <div class="footer-logo"><img src="../images/logo.png" alt="Cabinet Door Lab" /><p class="footer-desc">Professional drop-off cabinet door refinishing. Catalyzed 2K coating, turbine HVLP. Hickory, NC &amp; surrounding areas.</p></div>
+      <div>
+        <img src="../images/logo.png" alt="Cabinet Door Lab" class="footer-logo-img" />
+        <p class="footer-desc">Professional drop-off cabinet door refinishing. Catalyzed 2K coating applied with a turbine HVLP system. Factory-quality results without a contractor in your home. Hickory, NC area.</p>
+      </div>
       <div class="footer-col"><h5>Services</h5><ul class="footer-links"><li><a href="services.html#standard">Standard Doors</a></li><li><a href="services.html#drawers">Drawer Faces</a></li><li><a href="services.html#oversized">Pantry Doors</a></li><li><a href="services.html#vinyl">Vinyl-Coated</a></li></ul></div>
-      <div class="footer-col"><h5>Information</h5><ul class="footer-links"><li><a href="how-it-works.html">How It Works</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="coating-guide.html">Coating Guide</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div class="footer-col"><h5>Information</h5><ul class="footer-links"><li><a href="how-it-works.html">How It Works</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="coating-guide.html">2K Coating Guide</a></li><li><a href="faq.html">FAQ</a></li><li><a href="about.html">About</a></li></ul></div>
       <div class="footer-col"><h5>Contact</h5><ul class="footer-links"><li><a href="sms:+19803910498">(980) 391-0498</a></li><li><a href="mailto:orders@cabinetdoorlab.com">orders@cabinetdoorlab.com</a></li><li><a href="contact.html">Get A Quote</a></li></ul></div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Cabinet Door Lab · Hickory, NC</p>
-      <p class="footer-cities">Hickory · Statesville · Mooresville · Denver · Wilkesboro · Cornelius · Charlotte · NC</p>
+      <p>&copy; 2026 Cabinet Door Lab &middot; Hickory, NC &middot; <a href="sms:+19803910498" style="color:var(--red);">(980) 391-0498</a></p>
+      <p class="footer-cities">Hickory &middot; Statesville &middot; Mooresville &middot; Denver &middot; Wilkesboro &middot; Cornelius &middot; Charlotte &middot; NC</p>
     </div>
   </div>
 </footer>
 <script src="../js/main.js"></script>
-</body></html>
+</body>
+</html>
